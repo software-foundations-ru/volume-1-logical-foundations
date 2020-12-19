@@ -9,7 +9,7 @@ insert_final_newline = true
 [**]
 charset = utf-8
 
-[Makefile]
+[{Makefile,**.Makefile}]
 indent_style = tab
 
 [{**.js,**.json,**.css,**.v}]
