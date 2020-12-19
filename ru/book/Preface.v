@@ -1,20 +1,10 @@
-(** * Preface *)
+(** * Предисловие *)
 
 (* ################################################################# *)
-(** * Welcome *)
+(** * Приветствие *)
 
-(** This is the entry point to a series of electronic textbooks on
-    various aspects of _Software Foundations_, the mathematical
-    underpinnings of reliable software.  Topics in the series include
-    basic concepts of logic, computer-assisted theorem proving, the
-    Coq proof assistant, functional programming, operational
-    semantics, logics and techniques for reasoning about programs,
-    static type systems, property-based random testing, and
-    verification of practical C code.  The exposition is intended for
-    a broad range of readers, from advanced undergraduates to PhD
-    students and researchers.  No specific background in logic or
-    programming languages is assumed, though a degree of mathematical
-    maturity will be helpful.
+(** С этого предложения начинается серия электронных книг о различных сторонах _Основ программного обеспечения_, математического фундамента, необходимого для создания надежных программ. Серия книг рассматривает такие темы как: базовые понятия логики, доказательства теорем с помощью компьютера, средство доказательства теорем Coq, функциональное программирование, логика рассуждений при построении программ,
+    статическая система типов, property-based тестирование, и практическая проверка кода на языке C. Предоставленный материал предназначен для широкой аудитории читателей: от любопытных студентов до исследователей и ученых. Для чтения книги не требуется никаких предварительных знаний в логике или опыта программирования, однако некоторый опыт в математических дисциплинах определенно будет полезен.
 
     The principal novelty of the series is that it is one hundred
     percent formalized and machine-checked: each text is literally a
@@ -318,7 +308,7 @@
     readers.  Advanced exercises are for readers who want an extra
     challenge and a deeper cut at the material.
 
-    _Please do not post solutions to the exercises in a public place_. 
+    _Please do not post solutions to the exercises in a public place_.
     Software Foundations is widely used both for self-study and for
     university courses.  Having solutions easily available makes it
     much less useful for courses, which typically have graded homework
