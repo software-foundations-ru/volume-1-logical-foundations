@@ -46,22 +46,9 @@
        - Автоматические доказыватели теорем (automated theorem provers) позволяют выполнить следующую операцию "по нажатии одной кнопки": вы подаете на вход логическое высказывание, и затем программа возвращает вам ответ - "истина" или "ложь". Иногда результат высказывания остается неизвестен, так как вычисление результата высказывания не успевает закончиться за разумное время.
         Несмотря на то, что возможности таких инструментов все ещё сильно огранченны довольно узкими областями применения, за последние годы виден значительный прогресс в качестве их работы.
 
-       - Инструменты интерактивного доказательства теорем (proof assistants) - гибридные инструменты, который автоматизируют наимболее рутинные аспекты построения доказательств, в то время как полагаются на участие человека в сложных аспектах. Widely used proof
-         assistants include Isabelle, Agda, Twelf, ACL2, PVS, and Coq,
-         among many others.
+       - Инструменты интерактивного доказательства теорем (proof assistants) - гибридные инструменты, который автоматизируют наиболее рутинные аспекты построение доказательств, но в более сложных аспектах полагаются на помощь со стороны человека. Популярными программами этого типа являются: Isabelle, Agda, Twelf, ACL2, PVS, Coq, и другие.
 
-    This course is based around Coq, a proof assistant that has been
-    under development since 1983 and that in recent years has
-    attracted a large community of users in both research and
-    industry.  Coq provides a rich environment for interactive
-    development of machine-checked formal reasoning.  The kernel of
-    the Coq system is a simple proof-checker, which guarantees that
-    only correct deduction steps are ever performed.  On top of this
-    kernel, the Coq environment provides high-level facilities for
-    proof development, including a large library of common definitions
-    and lemmas, powerful tactics for constructing complex proofs
-    semi-automatically, and a special-purpose programming language for
-    defining new proof-automation tactics for specific situations.
+ Этот курс основан на Coq, инструменте интерактивного доказательства теорем, находящимся в разработке с 1983-го года. За последние годы Coq собрал крупное сообщество пользователей, состоящего как из людей занимающихся преимущественно исследовательской деятельностью, так и из специалистов промышленной индустрии. Coq представляет собой богатую возможностями среду для интерактивной разработки формального доказательства и его автоматической проверки машиной. Ядром системы Coq, является простой доказыватель теорем, который всегда обеспечивает единственно верную последовательность шагов вывода. Поверх этого ядра Coq предоставляет удобные высокоуровневые возможности для разработки доказательств, включая обширную библиотеку распространенных определений и лемм, мощные "тактики" для конструирования сложных доказательств в полу-автоматическом режиме, а так же специальный язык программирования для определения новых "тактик" для более частных случаев.
 
     Coq has been a critical enabler for a huge variety of work across
     computer science and mathematics:
