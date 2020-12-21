@@ -109,12 +109,18 @@ html, body {
 @media only screen { /* no div with internal scrolling to allow printing of whole content */
     body {
         display: flex;
-        flex-direction: column
+        flex-direction: column;
+        background-image: url(https://softwarefoundations.cis.upenn.edu/lf-current/common/media/image/logical_foundations_bg.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
     }
 
     #content {
         flex: 1;
-        overflow: auto;
+        margin: auto;
+        background: #fff;
+        padding: 0 48px;
+        max-width: 800px;
         display: flex;
         flex-direction: column;
     }
@@ -142,14 +148,13 @@ html, body {
 /* header */
 #header {
   width:100%;
-  padding: 0;
+  padding: 6px 0;
   margin: 0;
   display: flex;
   align-items: center;
-  background-color: rgb(21,57,105);
+  background-color: #3c4d83;
   color: white;
   font-weight: bold;
-  overflow: hidden;
 }
 
 
