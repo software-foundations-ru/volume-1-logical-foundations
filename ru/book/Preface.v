@@ -104,8 +104,8 @@
 
 (** ** Инструменты интерактивного доказательства теорем (Proof Assistants) *)
 
-(** Заимствование идей между логикой и computer sciense не всегда
-    направлено в одну сторону: развитие computer sciense так же
+(** Заимствование идей между логикой и computer science не всегда
+    направлено в одну сторону: развитие computer science так же
     произвело значительный вклад в логику.  Одним из примеров является
     разработка программных инструментов, которые помогают
     конструировать доказательства логических высказываний. Существует
@@ -145,7 +145,8 @@
     программирования для написания новых тактик для более частных
     случаев.
 
-    Coq сыграл важную роль для большого количества работ в областях computer sciense и математики:
+    Coq стал важным фактором для появления множества работ в различных областях
+    математики и computer science:
 
     - В качестве платформы моделирования языков программированиия, Coq
       стал одним из стандартных инструментом для исследователей,
@@ -169,23 +170,25 @@
 
     - Являясь одной из немногих сред функционального программирования
       с поддрежкой зависимых типов (dependent types), Coq стал
-      отличным источником вдохновения, что бы попробовать реализовать
-      новые идеи. Например, библиотека Ynot включает в себя реализацию
-      "relational Hoare reasoning" (расширение логики Хоара (Hoare
-      Logic) которое мы будем рассматривать в этом курсе) in Coq.
+      источником вдохновения для новых идей. Например, библиотека Ynot
+      включает в себя реализацию "relational Hoare reasoning"
+      (расширение логики Хоара (Hoare Logic) которое мы будем
+      рассматривать в этом курсе) in Coq.
 
-    - As a _proof assistant for higher-order logic_, it has been used
-      to validate a number of important results in mathematics.  For
-      example, its ability to include complex computations inside
-      proofs made it possible to develop the first formally verified
-      proof of the 4-color theorem.  This proof had previously been
-      controversial among mathematicians because it required checking
-      a large number of configurations using a program. In the Coq
-      formalization, everything is checked, including the correctness
-      of the computational part.  More recently, an even more massive
-      effort led to a Coq formalization of the Feit-Thompson Theorem,
-      the first major step in the classification of finite simple
-      groups.
+    - Являясь инструментом интерактивного доказательства теорем для
+      логики высшего порядка, Coq множество раз был использоавн для
+      проверки корректности важных результатов в математике.
+      Например, его способность включать сложные вычисления внутрь
+      доказательств, сделала возможной разработку первого формально
+      верифицированного доказательства теоремы о 4-х красках.  Ранее,
+      это доказательство вызывало много споров среди математиков
+      потому что оно требовало проверки огромного числа конфигураций
+      c помощью программы. При Coq-формализации, проверяется
+      все, включая корректность вычислительной части
+      программы. Кстати, не так давно еще большие усилия привели к
+      Coq-формализации теоремы Фейта-Томпсона (Feit-Thompson Theorem),
+      первого и очень важного шага в классификации простых конечных
+      групп.
 
    By the way, in case you're wondering about the name, here's what
    the official Coq web site at INRIA (the French national research
