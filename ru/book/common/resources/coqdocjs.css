@@ -132,12 +132,8 @@ html, body {
 
 #main {
     display: block;
-    padding: 16px;
-    padding-top: 1em;
-    padding-bottom: 2em;
     margin-left: auto;
     margin-right: auto;
-    max-width: 60em;
     flex: 1 0 auto;
 }
 
@@ -148,7 +144,6 @@ html, body {
 /* header */
 #header {
   width:100%;
-  padding: 6px 0;
   margin: 0;
   display: flex;
   align-items: center;

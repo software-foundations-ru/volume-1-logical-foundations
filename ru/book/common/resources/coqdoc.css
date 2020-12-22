@@ -1,10 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
-body{
-    font-family: 'Rubik';
+body {
+    font-family: 'Fira Code', monospace;
     font-size: 18px;
     font-weight: 300;
-    letter-spacing: -0.003em;
+    letter-spacing: -0.01em;
     line-height: 32px;
     color: #333;
 }
@@ -28,13 +28,13 @@ a[href]:hover, [clickable]:hover{
 }
 
 h, h1, h2, h3, h4, h5 {
-    line-height: 56px;
+    font-family: 'Fira Code', monospace;
     color: #555;
     text-rendering: optimizeLegibility;
     font-weight: normal;
-    letter-spacing: 0.1em;
     text-align: left;
     margin: 0;
+    margin-bottom: 24px;
 }
 
 div + br {
@@ -73,7 +73,7 @@ div:empty{ display: none;}
 }
 
 .inlinecode, .code, #main pre {
-    font-family: monospace;
+    font-family: 'Fira Code', monospace;
 }
 
 .code > br:first-child {
@@ -104,7 +104,7 @@ table.infrule {
 }
 
 td.infrule {
-    font-family: "Droid Sans Mono", "DejaVu Sans Mono", monospace;
+    font-family: 'Fira Code', monospace;
     text-align: center;
     padding: 0;
     line-height: 1;
@@ -186,6 +186,7 @@ tr.infrulemiddle hr {
 ul.doclist {
     margin-top: 0em;
     margin-bottom: 0em;
+    padding-left: 1em;
 }
 
 #toc > * {
