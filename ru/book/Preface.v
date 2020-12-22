@@ -176,7 +176,7 @@
       рассматривать в этом курсе) in Coq.
 
     - Являясь инструментом интерактивного доказательства теорем для
-      логики высшего порядка, Coq множество раз был использоавн для
+      логики высшего порядка, Coq много раз использовался для
       проверки корректности важных результатов в математике.
       Например, его способность включать сложные вычисления внутрь
       доказательств, сделала возможной разработку первого формально
@@ -190,16 +190,18 @@
       первого и очень важного шага в классификации простых конечных
       групп.
 
-   By the way, in case you're wondering about the name, here's what
-   the official Coq web site at INRIA (the French national research
-   lab where Coq has mostly been developed) says about it: "Some
-   French computer scientists have a tradition of naming their
-   software as animal species: Caml, Elan, Foc or Phox are examples of
-   this tacit convention. In French, 'coq' means rooster, and it
-   sounds like the initials of the Calculus of Constructions (CoC) on
-   which it is based."  The rooster is also the national symbol of
-   France, and C-o-q are the first three letters of the name of
-   Thierry Coquand, one of Coq's early developers. *)
+    Кстати, если вы почему-то волнуетесь из-за названия, вот что по
+    этому поводу сказано на оффициальном сайте Coq в INRIA
+    (национальная Французская исследовательская лаборатория где Coq по
+    сути и был разработан): "У каких-то французских computer science
+    ученых появилась традиция именовать свои программы названиями
+    животных: Caml, Elan, Foc or Phox - примеры этой негласной
+    договоренности. На французском, 'coq' означает 'петух', а ещё это
+    звучит как сокращение от Calculus of Constructions (CoC)
+    (Исчисление конструкций), на котором Coq и основан.". А ещё
+    национальным символом Франции является именно петух. А ещё C-o-q -
+    это первые три буквы имени Thierry Coquand, одного из первых
+    разработчиков Coq. *)
 
 (* ================================================================= *)
 (** ** Functional Programming *)
