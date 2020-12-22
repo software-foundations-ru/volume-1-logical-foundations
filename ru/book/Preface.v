@@ -204,21 +204,23 @@
     разработчиков Coq. *)
 
 (* ================================================================= *)
-(** ** Functional Programming *)
+(** ** Функциональное программирование *)
 
-(** The term _functional programming_ refers both to a collection of
-    programming idioms that can be used in almost any programming
-    language and to a family of programming languages designed to
-    emphasize these idioms, including Haskell, OCaml, Standard ML,
-    F##, Scala, Scheme, Racket, Common Lisp, Clojure, Erlang, and Coq.
+(** Термин "функциональное программирование" относится как к
+    некоторому набору идиом, которые доступны для использования
+    практически в любом языке программирования, так и к семейству
+    языков программирования, разработаных так, что бы основу языка
+    составляли эти идиомы. Примерами таких языков являются Haskell,
+    OCaml, Standard ML, F##, Scala, Scheme, Racket, Common Lisp,
+    Clojure, Erlang, and Coq.
 
-    Functional programming has been developed over many decades --
-    indeed, its roots go back to Church's lambda-calculus, which was
-    invented in the 1930s, well _before_ the first electronic
-    computers!  But since the early '90s it has enjoyed a surge of
-    interest among industrial engineers and language designers,
-    playing a key role in high-value systems at companies like Jane
-    Street Capital, Microsoft, Facebook, Twitter, and Ericsson.
+    Функциональное программирование развивалось многие десятилетия --
+    на самом деле, его корни растут из лямбда-исчесления Алонзо Чёрча,
+    которое было изобретено в 1930-е годы, задолго до первых
+    электронных компьютеров! Примерно с ранних 90-х стал наблюдаться
+    настоящий всплеск интереса среди инженеров и разрабочиков языков,
+    стоящих во главе разработки дорогостоящих систем в таких компаниях
+    как Jane Street Capital, Microsoft, Facebook, Twitter, и Ericsson.
 
     The most basic tenet of functional programming is that, as much as
     possible, computation should be _pure_, in the sense that the only
