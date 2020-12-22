@@ -1,9 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
 body{
-    font-family: Helvetica;
-    font-size: 16px;
-    color: #2D2D2D
+    font-family: 'Rubik';
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: -0.003em;
+    line-height: 32px;
+    color: #333;
 }
 
 a {
@@ -14,7 +17,6 @@ a {
     margin-left: -3px;
     margin-right: -3px;
     color: inherit;
-    font-weight: bold;
 }
 
 #main .code a, #main .inlinecode a, #toc a {
@@ -22,17 +24,17 @@ a {
 }
 
 a[href]:hover, [clickable]:hover{
-    background-color: rgba(0,0,0,0.1);
     cursor: pointer;
 }
 
 h, h1, h2, h3, h4, h5 {
-    line-height: 1;
-    color: black;
+    line-height: 56px;
+    color: #555;
     text-rendering: optimizeLegibility;
     font-weight: normal;
     letter-spacing: 0.1em;
     text-align: left;
+    margin: 0;
 }
 
 div + br {
@@ -41,20 +43,24 @@ div + br {
 
 div:empty{ display: none;}
 
+#main h1:last-child {
+    font-size: 48px;
+}
+
 #main h1 {
-    font-size: 2em;
+    font-size: 36px;
 }
 
 #main h2 {
-    font-size: 1.667rem;
+    font-size: 24px;
 }
 
 #main h3 {
-    font-size: 1.333em;
+    font-size: 20px;
 }
 
 #main h4, #main h5, #main h6 {
-    font-size: 1em;
+    font-size: 18px;
 }
 
 #toc h2 {
@@ -63,7 +69,7 @@ div:empty{ display: none;}
 
 #main .doc {
     margin: 0;
-    text-align: justify;
+    text-align: left;
 }
 
 .inlinecode, .code, #main pre {
