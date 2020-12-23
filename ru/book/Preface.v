@@ -228,26 +228,28 @@
     возможно, в том смысле что единственным эффект запуска функции
     должен быть возврат результата: функция не должна производить
     никаких побочных-эффектов, таких как операции ввода/вывода (I/O),
-    присваиваний изменяемым (mutable) переменным, перенаправлений
-    указателей, и т.д. Например, там где функция сортировки
-    реализованная в императивном стиле может принять список чисел,
-    переставить указатели внутри этого же списка в нужном порядке и
-    вернуть его же, чистая функция сортировки приняла бы исходный
-    список и вернула бы новый список, содержащий те же числа в
-    отсортированном порядке.
+    присваиваний новых значений изменяемым (mutable) переменным,
+    перенаправлений указателей, и т.д. Например, там где функция
+    сортировки реализованная в императивном стиле может принять список
+    чисел, переставить указатели внутри этого же списка в нужном
+    порядке и вернуть его же, чистая функция сортировки приняла бы
+    исходный список и вернула бы новый список, содержащий те же числа
+    в отсортированном порядке.
 
-    A significant benefit of this style of programming is that it
-    makes programs easier to understand and reason about.  If every
-    operation on a data structure yields a new data structure, leaving
-    the old one intact, then there is no need to worry about how that
-    structure is being shared and whether a change by one part of the
-    program might break an invariant relied on by another part of the
-    program.  These considerations are particularly critical in
-    concurrent systems, where every piece of mutable state that is
-    shared between threads is a potential source of pernicious bugs.
-    Indeed, a large part of the recent interest in functional
-    programming in industry is due to its simpler behavior in the
-    presence of concurrency.
+    Существенным преимуществом этого стиля программирования является
+    то, что он делает программмы более простыми для понимания и
+    размышления. Если каждая операция над структурой данных производит
+    новую структуру, оставляя старую без изменнений, то исчезает
+    необходимость беспокоиться о том как эта структура разделяется
+    между разными частями программы, и могут ли её изменения в одной
+    части нарушить инвариант на который полагается другая часть
+    программы. Это особенно важно при разработке параллельных
+    (concurrent) систем, где каждый любая часть состояния,
+    разделяемого между потоками, является потенциальным источником
+    труднонаходимых багов программы. На самом деле, большая часть
+    недавнего интереса индустрии к функциональному программированию
+    объясняется более предсказуемым и простым поведением при работе с
+    параллельными вычислениями.
 
     Another reason for the current excitement about functional
     programming is related to the first: functional programs are often
