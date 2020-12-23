@@ -215,7 +215,7 @@
     Erlang, and Coq.
 
     Функциональное программирование развивалось на протяжении многих
-    десятилетий -- на самом деле, его корни растут из
+    десятилетий - на самом деле, его корни растут из
     лямбда-исчисления Алонзо Чёрча, которое было изобретено в 1930-е
     годы, задолго до первых электронных компьютеров! Примерно с ранних
     90-х стал наблюдаться настоящий всплеск интереса среди инженеров и
@@ -273,50 +273,52 @@
     объявления и проверки логических утверждений. Более того, когда мы
     ближе с познакомимся с Coq, мы увидим что в основе обоих этих
     аспектов на самом деле лежат одни и те же механизмы, ведь
-    доказательства -- это и есть программы.*)
+    доказательства - это и есть программы.*)
 
 (* ================================================================= *)
-(** ** Further Reading *)
+(** ** Дальнейшее изучение *)
 
-(** This text is intended to be self contained, but readers looking
-    for a deeper treatment of particular topics will find some
-    suggestions for further reading in the [Postscript] chapter.
-    Bibliographic information for all cited works can be found in the
-    file [Bib].*)
+(** Этот текст задумывался как самодостаточный, однако читатели,
+    желающие глубже погрузиться в какую-нибудь из тем, найдут
+    некоторое колличество рекоммендация для дальнейшего чтения в главе
+    [Заключение].  Библиографическая информация всех цитируемых работ
+    может быть найдена в файле [Bib].*)
 
 (* ################################################################# *)
-(** * Practicalities *)
+(** * Практическая часть *)
 
 (* ================================================================= *)
-(** ** System Requirements *)
+(** ** Системные требования *)
 
-(** Coq runs on Windows, Linux, and macOS.  You will need:
+(** Coq работает на Windows, Linux, и macOS. Вам понадобится:
 
-    - A current installation of Coq, available from the Coq home page.
-      These files have been tested with Coq 8.12.
+    - Установить Coq. Вы можете скачать его с его оффициального сайта.
+      Файлы этой книги были протестированы с Coq версии 8.12.
 
-    - An IDE for interacting with Coq.  Currently, there are two
-      choices:
+    - Любая IDE, которая позволяет взаимодействовать с Coq. На данный
+      момент поддерживаются:
 
-        - Proof General is an Emacs-based IDE.  It tends to be
-          preferred by users who are already comfortable with Emacs.
-          It requires a separate installation (google "Proof
-          General").
+        - Для пользователей, которые пользуются Emacs, Proof General
+          чаще-всего является естественным выбором.  Гуглите "Proof
+          General" что бы найти инструкцию по установке.
 
-          Adventurous users of Coq within Emacs may want to check
-          out extensions such as [company-coq] and [control-lock].
+          Так же советуем обратить внимание на пакет "company-coq".
 
-        - CoqIDE is a simpler stand-alone IDE.  It is distributed with
-          Coq, so it should be available once you have Coq installed.
-          It can also be compiled from scratch, but on some platforms
-          this may involve installing additional packages for GUI
-          libraries and such.
+        - CoqIDE - это простая IDE поставляемая совместно с Coq. Если вы
+          уже успешно установили Coq, эта IDE тоже будет установлена.
+          Вы так же можете сами её скомпилировать, но на некоторых
+          платформах может понадобиться установка дополнительных
+          пакетов, GUI библиотек и т.п.
 
-          Users who like CoqIDE should consider running it with the
-          "asynchronous" and "error resilience" modes disabled:
+          Тем пользователям, которые выберут CoqIDE, рекомммендуем
+          запускать его с выключенными "asynchronous" and "error
+          resilience" режимами:
 
-              coqide -async-proofs off \
-                     -async-proofs-command-error-resilience off Foo.v &
+              coqide -async-proofs off -async-proofs-command-error-resilience off Foo.v &
+
+        - Прим. переводчика: если вы пользуетесь VSCode, или просто не
+          хотите возиться с конфигами Emacs, то можете попробовать "vscoq" плагин
+          для VSCode. Для Vim существует расширение Coqtail.
 *)
 
 (* ================================================================= *)
