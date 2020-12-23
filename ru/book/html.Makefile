@@ -2,9 +2,9 @@ EXTRA_DIR:=common
 COQDOCFLAGS:= \
 	--external 'http://ssr2.msr-inria.inria.fr/doc/ssreflect-1.5/' Ssreflect \
 	--external 'http://ssr2.msr-inria.inria.fr/doc/mathcomp-1.5/' MathComp \
-	--toc --toc-depth 2 --html --interpolate \
 	--index indexpage \
 	--no-lib-name \
+	--toc \
 	--with-header $(EXTRA_DIR)/header.html --with-footer $(EXTRA_DIR)/footer.html
 export COQDOCFLAGS
 COQMAKEFILE:=Makefile.coq
@@ -28,6 +28,8 @@ html: $(COQMAKEFILE) $(VS)
 	rm -fr html
 	@$(MAKE) -f $(COQMAKEFILE) $@
 	cp -r $(EXTRA_DIR)/* html
+	# cp -r $/*.html html
+	node -e "fs.readdirSync('./html').forEach(f => { if(/^LF\./.test(f)) { fs.renameSync('html/' + f, 'html/' + f.replace('LF\.', '')) }})" // Remove LF in html file names.
 
 $(COQMAKEFILE): $(COQ_PROJ) $(VS)
 	coq_makefile -f $(COQ_PROJ) $(VS_OTHER) -o $@
