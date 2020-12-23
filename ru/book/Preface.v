@@ -322,47 +322,50 @@
 *)
 
 (* ================================================================= *)
-(** ** Exercises *)
+(** ** Упражнения *)
 
-(** Each chapter includes numerous exercises.  Each is marked with a
-    "star rating," which can be interpreted as follows:
+(** Каждая глава включает в себя некоторый набор упражнений. Каждое
+    упражнение помечено звездочками, которые можно интерпретировать следующим
+    образом:
 
-       - One star: easy exercises that underscore points in the text
-         and that, for most readers, should take only a minute or two.
-         Get in the habit of working these as you reach them.
+       - Одна звездочка: простые упражнения которые подчеркивают моменты,
+         озвученные в тексте и решение которых займет одну-две минуты
+         для большинства читателей.
 
-       - Two stars: straightforward exercises (five or ten minutes).
+       - Две звездочки: простые упражнения (5-10 минут).
 
-       - Three stars: exercises requiring a bit of thought (ten
-         minutes to half an hour).
+       - Три звездочки: упражнения, требующие некоторого времени для
+         размышлений (10-30 минут).
 
-       - Four and five stars: more difficult exercises (half an hour
-         and up).
+       - Четыре и пять звездочек: более сложные упражнения (более 30-ти минут).
 
-    Those using SF in a classroom setting should note that the autograder
-    assigns extra points to harder exercises:
+    Тем, кто использует "Основы программирования" в классе, следует
+    отметить, что автогрейдер присваивает дополнительные баллы за
+    более сложные упражнения:
 
-      1 star  = 1 point
-      2 stars = 2 points
-      3 stars = 3 points
-      4 stars = 6 points
-      5 stars = 10 points
+      1 звездочка  = 1 балл
+      2 звездочки = 2 балла
+      3 звездочка = 3 балла
+      4 звездочка = 6 баллов
+      5 звездочка = 10 баллов
 
-    Some exercises are marked "advanced," and some are marked
-    "optional."  Doing just the non-optional, non-advanced exercises
-    should provide good coverage of the core material.  Optional
-    exercises provide a bit of extra practice with key concepts and
-    introduce secondary themes that may be of interest to some
-    readers.  Advanced exercises are for readers who want an extra
-    challenge and a deeper cut at the material.
+    Некоторые упражнения помечены как "продвинутые", а некоторые как
+    "опциональное". Выполнение только не продвинутых и не опциональных
+    упражнений должно обеспечить хорошее усвоение основного материала.
+    Опциональные упражнения дадут немного дополнительной практики по
+    ключевым концепциям и познакомят с дополнительными темами, которые
+    могут оказаться интересными для некоторых читателей. Продвинутые
+    упражнения предназначены для читателей, которые хотят получить
+    дополнительный челлендж и глубокое погружение в материал.
 
-    _Please do not post solutions to the exercises in a public place_.
-    Software Foundations is widely used both for self-study and for
-    university courses.  Having solutions easily available makes it
-    much less useful for courses, which typically have graded homework
-    assignments.  We especially request that readers not post
-    solutions to the exercises anyplace where they can be found by
-    search engines. *)
+    Пожалуйста, не публикуйте решения к упражнений в публичных местах.
+    "Основы программирования" широко используются и для само-обучения,
+    и в качестве материала для университетских курсов. Наличие
+    публично доступных решений к задачам, делает материал намного
+    менее полезным для курсов, в которых иммеет значение оценка
+    домашних заданий. Мы особенно просим читателей не публиковать
+    решения в где бы то ни было доступном для поисковиков наподобие
+    Google месте. *)
 
 (* ================================================================= *)
 (** ** Downloading the Coq Files *)
