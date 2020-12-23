@@ -265,14 +265,15 @@
     систем, как Hadoop, который используется компанией Google для
     индексации данных всей всемирной паутины.
 
-    For purposes of this course, functional programming has yet
-    another significant attraction: it serves as a bridge between
-    logic and computer science.  Indeed, Coq itself can be viewed as a
-    combination of a small but extremely expressive functional
-    programming language plus a set of tools for stating and proving
-    logical assertions.  Moreover, when we come to look more closely,
-    we find that these two sides of Coq are actually aspects of the
-    very same underlying machinery -- i.e., _proofs are programs_.  *)
+    Для целей этого курса функциональное программирование имеет еще
+    одну примечательную особенность: оно служит мостом между логикой и
+    computer science. Действительно, ведь Coq можно рассмматривать как
+    комбинацию небольшого, но очень выразительного языка
+    функционального программиирования и набора инструментов для
+    объявления и проверки логических утверждений. Более того, когда мы
+    ближе с познакомимся с Coq, мы увидим что в основе обоих этих
+    аспектов на самом деле лежат одни и те же механизмы, ведь
+    доказательства -- это и есть программы.*)
 
 (* ================================================================= *)
 (** ** Further Reading *)
