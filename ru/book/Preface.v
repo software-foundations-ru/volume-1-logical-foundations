@@ -263,7 +263,7 @@
     функционального программирования явлется паттерн "Map-Reduce",
     который стал сердцем для многих высоконагруженных распределенных
     систем, как Hadoop, который используется компанией Google для
-    индексации всей всемирной паутины.
+    индексации данных всей всемирной паутины.
 
     For purposes of this course, functional programming has yet
     another significant attraction: it serves as a bridge between
