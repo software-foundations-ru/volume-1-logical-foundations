@@ -207,10 +207,10 @@
 (** ** Функциональное программирование *)
 
 (** Термин "функциональное программирование" может ссылаться как на
-    некоторый набор идиом, которые доступны для использования
+    некоторый набор паттернов, которые доступны для использования
     практически в любом языке программирования, так и к семейству
     языков программирования, разработаных так, что бы в основе языка
-    лежали эти идиомы. Примерами таких языков являются Haskell, OCaml,
+    лежали эти паттерны. Примерами таких языков являются Haskell, OCaml,
     Standard ML, F##, Scala, Scheme, Racket, Common Lisp, Clojure,
     Erlang, and Coq.
 
@@ -251,17 +251,19 @@
     объясняется более предсказуемым и простым поведением при работе с
     параллельными вычислениями.
 
-    Another reason for the current excitement about functional
-    programming is related to the first: functional programs are often
-    much easier to parallelize and physically distribute than their
-    imperative counterparts.  If running a computation has no effect
-    other than producing a result, then it does not matter _where_ it
-    is run.  Similarly, if a data structure is never modified
-    destructively, then it can be copied freely, across cores or
-    across the network.  Indeed, the "Map-Reduce" idiom, which lies at
-    the heart of massively distributed query processors like Hadoop
-    and is used by Google to index the entire web is a classic example
-    of functional programming.
+    Другая причина текущего интереса к функциональному
+    программированию вытекает из предыдущей: функциональные программы
+    проще распараллеливать и физически распространять на сервера, чем
+    их императивные аналоги. Если процесс выполнения вычисления не
+    имеет эффектов, кроме собственно произведения результата
+    вычисления, то нет никакого значения где запускать этот
+    процесс. Похожим образом, если структура данных никогда
+    деструктивно не меняется, то она может свободно копироваться между
+    ядрами процессора или через сеть. Классическим примером
+    функционального программирования явлется паттерн "Map-Reduce",
+    который стал сердцем для многих высоконагруженных распределенных
+    систем, как Hadoop, который используется компанией Google для
+    индексации всей всемирной паутины.
 
     For purposes of this course, functional programming has yet
     another significant attraction: it serves as a bridge between
