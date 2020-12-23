@@ -9,7 +9,7 @@ COQDOCFLAGS:= \
 export COQDOCFLAGS
 COQMAKEFILE:=Makefile.coq
 COQ_PROJ:=_CoqProject
-VS:=$(wildcard *.v)
+VS:="Preface.v	Basics.v"
 VS_IN_PROJ:=$(shell grep .v $(COQ_PROJ))
 
 ifeq (,$(VS_IN_PROJ))
@@ -28,8 +28,6 @@ html: $(COQMAKEFILE) $(VS)
 	rm -fr html
 	@$(MAKE) -f $(COQMAKEFILE) $@
 	cp -r $(EXTRA_DIR)/* html
-	# cp -r $/*.html html
-	node -e "fs.readdirSync('./html').forEach(f => { if(/^LF\./.test(f)) { fs.renameSync('html/' + f, 'html/' + f.replace('LF\.', '')) }})" // Remove LF in html file names.
 
 $(COQMAKEFILE): $(COQ_PROJ) $(VS)
 	coq_makefile -f $(COQ_PROJ) $(VS_OTHER) -o $@
