@@ -1,39 +1,45 @@
-(** * Basics: Functional Programming in Coq *)
+(** * Основы: функциональное программирование в Coq *)
 
-(* REMINDER:
+(* НАПОМИНАНИЕ:
 
-          #####################################################
-          ###  PLEASE DO NOT DISTRIBUTE SOLUTIONS PUBLICLY  ###
-          #####################################################
+          ###################################################################
+          ###  ПОЖАЛУЙСТА НЕ ПУБЛИКУЙТЕ РЕШЕНИЯ ЗАДАЧ В ПУБЛИЧНЫХ МЕСТАХ  ###
+          ###################################################################
 
-   (See the [Preface] for why.)
+   (См. главу [Предисловие] что бы понять почему не надо этого делать.)
 *)
 
 (* ################################################################# *)
-(** * Introduction *)
+(** * Введение *)
 
-(** The functional style of programming is founded on simple, everyday
-    mathematical intuition: If a procedure or method has no side
-    effects, then (ignoring efficiency) all we need to understand
-    about it is how it maps inputs to outputs -- that is, we can think
-    of it as just a concrete method for computing a mathematical
-    function.  This is one sense of the word "functional" in
-    "functional programming."  The direct connection between programs
-    and simple mathematical objects supports both formal correctness
-    proofs and sound informal reasoning about program behavior.
+(** Функциональный стиль программирования базируется на простой
+    математической интуиции: если процедура или метод не имеет
+    побочных эффектов, то всё что нам нужно понимать о том как работет
+    эта процедура (если пренебречь её эффективностью) - это то как
+    входные данные соотносятся с выходными, и больше ничего. Мы можем
+    думать об этом как просто о конкретном способе вычисления
+    математической функциии. В этом и заключается одно из значений
+    слова "функциональный" в словосочетании "функциональное
+    программирование." TODO Прямая связь между программамами и простыми
+    математическими объектами поддерживает как доказательства
+    формальной корректности, так и обоснованния неформальных
+    рассуждений о поведении программы.
 
-    The other sense in which functional programming is "functional" is
-    that it emphasizes the use of functions as _first-class_ values --
-    i.e., values that can be passed as arguments to other functions,
-    returned as results, included in data structures, etc.  The
-    recognition that functions can be treated as data gives rise to a
-    host of useful and powerful programming idioms.
+    Другое значение, в котором функциональное программирование
+    является "функциональным" - это то, что оно позволяет использовать
+    функции как значения первого порядка (first-class values),
+    т.е. значения которые можно передать другим функциям в качестве их
+    аргументов, вернуть как результат выполнения функции, сделать её
+    частью какой-либо структуры данных, и т.д. Наличие возможности
+    рассматривать функции как данные, позволяет пользоваться
+    множеством полезных и мощных идиом программирования.
 
-    Other common features of functional languages include _algebraic
-    data types_ and _pattern matching_, which make it easy to
-    construct and manipulate rich data structures, and _polymorphic
-    type systems_ supporting abstraction and code reuse.  Coq offers
-    all of these features.
+    Другими типичными свойствами функциональных языков являются
+    алгебраические типы данных и сопоставление с образцом
+    (pattern-matching), которые облегчают конструирование и
+    манипуляции со сложными структурами данных, а так же полиморфные
+    системы типов, облегчающие построение абстракций и
+    переиспользование кода.
 
     The first half of this chapter introduces the most essential
     elements of Coq's native functional programming language, called
@@ -281,7 +287,7 @@ Proof. simpl. reflexivity. Qed.
     separate from the surrounding text.  In the HTML version of the
     files, these pieces of text appear in a [different font]. *)
 
-(** **** Exercise: 1 star, standard (nandb) 
+(** **** Exercise: 1 star, standard (nandb)
 
     The command [Admitted] can be used as a placeholder for an
     incomplete proof.  We use it in exercises to indicate the parts
@@ -308,7 +314,7 @@ Example test_nandb4:               (nandb true true) = false.
 (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(** **** Exercise: 1 star, standard (andb3) 
+(** **** Exercise: 1 star, standard (andb3)
 
     Do the same for the [andb3] function below. This function should
     return [true] when all of its inputs are [true], and [false]
@@ -750,7 +756,7 @@ Fixpoint exp (base power : nat) : nat :=
     | S p => mult base (exp base p)
   end.
 
-(** **** Exercise: 1 star, standard (factorial) 
+(** **** Exercise: 1 star, standard (factorial)
 
     Recall the standard mathematical factorial function:
 
@@ -850,7 +856,7 @@ Proof. simpl. reflexivity.  Qed.
     can try to prove, while [x =? y] is an _expression_ whose
     value (either [true] or [false]) we can compute. *)
 
-(** **** Exercise: 1 star, standard (ltb) 
+(** **** Exercise: 1 star, standard (ltb)
 
     The [ltb] function tests natural numbers for [l]ess-[t]han,
     yielding a [b]oolean.  Instead of making up a new [Fixpoint] for
@@ -1018,7 +1024,7 @@ Proof.
     making this change in the above proof and see what difference it
     makes.) *)
 
-(** **** Exercise: 1 star, standard (plus_id_exercise) 
+(** **** Exercise: 1 star, standard (plus_id_exercise)
 
     Remove "[Admitted.]" and fill in the proof. *)
 
@@ -1065,7 +1071,7 @@ Proof.
   rewrite <- mult_n_O.
   reflexivity. Qed.
 
-(** **** Exercise: 1 star, standard (mult_n_1) 
+(** **** Exercise: 1 star, standard (mult_n_1)
 
     Use those two lemmas about multiplication that we just checked to
     prove the following theorem.  Hint: recall that [1] is [S O]. *)
@@ -1256,7 +1262,7 @@ Proof.
       - reflexivity. }
 Qed.
 
-(** **** Exercise: 2 stars, standard (andb_true_elim2) 
+(** **** Exercise: 2 stars, standard (andb_true_elim2)
 
     Prove the following claim, marking cases (and subcases) with
     bullets when you use [destruct]. Hint: delay introducing the
@@ -1380,7 +1386,7 @@ Fixpoint plus' (n : nat) (m : nat) : nat :=
     "decreasing analysis" is not very sophisticated, it is sometimes
     necessary to write functions in slightly unnatural ways. *)
 
-(** **** Exercise: 2 stars, standard, optional (decreasing) 
+(** **** Exercise: 2 stars, standard, optional (decreasing)
 
     To get a concrete sense of this, find a way to write a sensible
     [Fixpoint] definition (of a simple function on numbers, say) that
@@ -1397,7 +1403,7 @@ Fixpoint plus' (n : nat) (m : nat) : nat :=
 (* ################################################################# *)
 (** * More Exercises *)
 
-(** **** Exercise: 1 star, standard (identity_fn_applied_twice) 
+(** **** Exercise: 1 star, standard (identity_fn_applied_twice)
 
     Use the tactics you have learned so far to prove the following
     theorem about boolean functions. *)
@@ -1411,7 +1417,7 @@ Proof.
 
 (** [] *)
 
-(** **** Exercise: 1 star, standard (negation_fn_applied_twice) 
+(** **** Exercise: 1 star, standard (negation_fn_applied_twice)
 
     Now state and prove a theorem [negation_fn_applied_twice] similar
     to the previous one but where the second hypothesis says that the
@@ -1425,7 +1431,7 @@ Definition manual_grade_for_negation_fn_applied_twice : option (nat*string) := N
 
     [] *)
 
-(** **** Exercise: 3 stars, standard, optional (andb_eq_orb) 
+(** **** Exercise: 3 stars, standard, optional (andb_eq_orb)
 
     Prove the following theorem.  (Hint: This one can be a bit tricky,
     depending on how you approach it.  You will probably need both
@@ -1441,7 +1447,7 @@ Proof.
 
 (** [] *)
 
-(** **** Exercise: 3 stars, standard (binary) 
+(** **** Exercise: 3 stars, standard (binary)
 
     We can generalize our unary representation of natural numbers to
     the more efficient binary representation by treating a binary
