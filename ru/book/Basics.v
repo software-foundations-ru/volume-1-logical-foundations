@@ -34,38 +34,40 @@
     рассматривать функции как данные, позволяет пользоваться
     множеством полезных и мощных идиом программирования.
 
-    Другими типичными свойствами функциональных языков являются
+    Так же типичными возможностями функциональных языков являются
     алгебраические типы данных и сопоставление с образцом
     (pattern-matching), которые облегчают конструирование и
     манипуляции со сложными структурами данных, а так же полиморфные
     системы типов, облегчающие построение абстракций и
     переиспользование кода.
 
-    The first half of this chapter introduces the most essential
-    elements of Coq's native functional programming language, called
-    _Gallina_.  The second half introduces some basic _tactics_ that
-    can be used to prove properties of Gallina programs. *)
+    Первая половина этой главы знакомит с основными элементами
+    встроенного в Coq функционального языка программирования, который
+    называется Gallina ("курица" на испанском языке). Вторая половина главы
+    повествует о некоторых простых тактиках, которые могут быть
+    использованы для доказательства свойств программ, написанных на
+    Gallina. *)
 
 (* ################################################################# *)
-(** * Data and Functions *)
+(** * Данные и функции *)
 
 (* ================================================================= *)
-(** ** Enumerated Types *)
+(** ** Перечисляемые типы *)
 
-(** One notable aspect of Coq is that its set of built-in
-    features is _extremely_ small.  For example, instead of providing
-    the usual palette of atomic data types (booleans, integers,
-    strings, etc.), Coq offers a powerful mechanism for defining new
-    data types from scratch, with all these familiar types as
-    instances.
+(** Одной интересной особенностью Coq является то, что множество
+    встроенных в него функций крайне мало. Например вместо того, что
+    бы предоставить обычный набор примитивных типов данных
+    (логический, целые числа, строки и т.д.), Coq предоставляет мощный
+    механизм для определения новых типов данных с нуля, TODO
 
-    Naturally, the Coq distribution comes with an extensive standard
-    library providing definitions of booleans, numbers, and many
-    common data structures like lists and hash tables.  But there is
-    nothing magic or primitive about these library definitions.  To
-    illustrate this, this course we will explicitly recapitulate
-    (almost) all the definitions we need, rather than getting them
-    from the standard library. *)
+    Само собой Coq поставляется вместе с обширной стандартной
+    библиотекой, предоставляющей определения для логических, числовых,
+    и многих распространённых структур данных, таких как список или
+    хэш-таблица. Нет ничего сверхъествественого или наоборот очень
+    низкоуровневого в этих библиотечных определениях. Что бы это
+    проиллюстрировать, в этом курсе мы будем сами явно создавать почти
+    все нужные нам определения, вместо того что бы пользоваться
+    готовыми из стандартной библиотеки. *)
 
 (* ================================================================= *)
 (** ** Days of the Week *)
