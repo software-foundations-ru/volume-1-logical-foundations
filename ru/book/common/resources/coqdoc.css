@@ -76,6 +76,11 @@ div:empty{ display: none;}
     font-family: 'Fira Code', monospace;
 }
 
+.inlinecode {
+    background-color: #f5f5f5;
+    padding: 0 0.5em;
+}
+
 .code > br:first-child {
   display: none;
 }

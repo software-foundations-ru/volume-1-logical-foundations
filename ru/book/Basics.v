@@ -116,7 +116,7 @@ Definition next_weekday (d:day) : day :=
     примеров, с помощью которых можно проверить как эта функция
     работает. В Coq есть три способа для написания своих примеров.
     Первый способ - это использование команды [Compute], позволяющей
-    запустить составное выражения, содержащее вызов функции
+    запустить составное выражение, содержащее вызов функции
     [next_weekday]. *)
 
 Compute (next_weekday friday).
@@ -138,7 +138,7 @@ Compute (next_weekday (next_weekday saturday)).
 Example test_next_weekday:
   (next_weekday (next_weekday saturday)) = tuesday.
 
-(** Декларация выше делает две вещи: создаёт утверждение (что второй
+(** Эта декларация делает две вещи: создаёт утверждение (что второй
     после субботы [saturday] день недели - это вторник [tuesday]), и
     даёт этому утверждению собственное имя, которое может быть позже
     использовано для ссылки к нему.  Сделав утверждение, мы можем
@@ -146,22 +146,22 @@ Example test_next_weekday:
 
 Proof. simpl. reflexivity.  Qed.
 
-(** The details are not important just now, but essentially this
-    can be read as "The assertion we've just made can be proved by
-    observing that both sides of the equality evaluate to the same
-    thing."
+(** Подробности этого кода сейчас не важны, но его смысл примерно
+    такой: "Только что сделанное утверждение может быть доказано, если
+    обе стороны равенства значат одно и то же."
 
-    Third, we can ask Coq to _extract_, from our [Definition], a
-    program in another, more conventional, programming
-    language (OCaml, Scheme, or Haskell) with a high-performance
-    compiler.  This facility is very interesting, since it gives us a
-    path from proved-correct algorithms written in Gallina to
-    efficient machine code.  (Of course, we are trusting the
-    correctness of the OCaml/Haskell/Scheme compiler, and of Coq's
-    extraction facility itself, but this is still a big step forward
-    from the way most software is developed today.) Indeed, this is
-    one of the main uses for which Coq was developed.  We'll come back
-    to this topic in later chapters. *)
+    Третий способ заключается в том, что бы попросить Coq извлечь
+    [Definition], в виде программы на другом, более распространённом
+    языке программирования (OCaml, Scheme, or Haskell), с
+    высокопроизводительным компилятором. Это очень интересная
+    возможность, прокладывающая путь от доказано корректных алгоритмов
+    на Gallina до высокоэффективного машинного кода.  Конечно нам
+    приходится доверять корректности OCaml/Haskell/Scheme
+    компиляторов, и самой фиче Coq по извлечению кода, однако это уже
+    большой шаг вперед по сравнению с методами с помощью которых
+    разрабатывается большинство программ в наши дни. На самом деле,
+    это и есть один из основных сценариев для которого Coq был
+    разработан. Мы ещё вернёмся к этой теме в последующих главах. *)
 
 (* ================================================================= *)
 (** ** Homework Submission Guidelines *)
