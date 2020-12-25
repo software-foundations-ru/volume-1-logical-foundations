@@ -5,6 +5,7 @@ COQDOCFLAGS:= \
 	--index indexpage \
 	--no-lib-name \
 	--toc \
+	--parse-comments \
 	--with-header $(EXTRA_DIR)/header.html --with-footer $(EXTRA_DIR)/footer.html
 export COQDOCFLAGS
 COQMAKEFILE:=Makefile.coq

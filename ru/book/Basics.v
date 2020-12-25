@@ -2,11 +2,11 @@
 
 (* НАПОМИНАНИЕ:
 
-          ###################################################################
-          ###  ПОЖАЛУЙСТА НЕ ПУБЛИКУЙТЕ РЕШЕНИЯ ЗАДАЧ В ПУБЛИЧНЫХ МЕСТАХ  ###
-          ###################################################################
+   #####################################################################
+   ###  ПОЖАЛУЙСТА НЕ ПУБЛИКУЙТЕ РЕШЕНИЯ ЗАДАЧ ОБЩЕДУСТУПНЫХ МЕСТАХ  ###
+   #####################################################################
 
-   (См. главу [Предисловие] что бы понять почему не надо этого делать.)
+   См. главу [Предисловие] почему не надо этого делать.
 *)
 
 (* ################################################################# *)
@@ -73,11 +73,11 @@
     готовыми из стандартной библиотеки. *)
 
 (* ================================================================= *)
-(** ** Days of the Week *)
+(** ** Дни недели *)
 
-(** To see how this definition mechanism works, let's start with
-    a very simple example.  The following declaration tells Coq that
-    we are defining a set of data values -- a _type_. *)
+(** Мы начнем знакомиться с механизмом определений с очень простого
+    примера. Объявление ниже сообщает Coq что мы определяем новое
+    множество значений - тип. *)
 
 Inductive day : Type :=
   | monday
@@ -88,11 +88,11 @@ Inductive day : Type :=
   | saturday
   | sunday.
 
-(** The new type is called [day], and its members are [monday],
-    [tuesday], etc.
+(** Новый тип называется [day], а его членами являются [monday],
+    [tuesday], и т.д.
 
-    Having defined [day], we can write functions that operate on
-    days. *)
+    Имея определение [day], мы теперь можем создавать функции, которые
+    умеют работать с сущностями типа [day]. *)
 
 Definition next_weekday (d:day) : day :=
   match d with
@@ -105,18 +105,17 @@ Definition next_weekday (d:day) : day :=
   | sunday    => monday
   end.
 
-(** One point to note is that the argument and return types of
-    this function are explicitly declared.  Like most functional
-    programming languages, Coq can often figure out these types for
-    itself when they are not given explicitly -- i.e., it can do _type
-    inference_ -- but we'll generally include them to make reading
-    easier. *)
+(** Заметим, что типы аргумента и возвращаемого значения этой функции
+    явно указаны. Как и большинство функциональных языков, даже когда
+    типы не указаны в коде явно, Coq сам для себя может выяснить что
+    это за типы, другими словами он может осуществить вывод типов
+    (type inference), но мы будем указывать их явно что бы облегчить
+    чтение книги. *)
 
-(** Having defined a function, we should next check that it
-    works on some examples.  There are actually three different ways
-    to do the examples in Coq.  First, we can use the command
-    [Compute] to evaluate a compound expression involving
-    [next_weekday]. *)
+(** Определив функцию, мы можем проверить что эта функция работает с
+    помощью каких-нибудь примеров. В Coq есть три способа создания
+    примеров.  Первый - использованиее команды [Compute] что бы
+    проверить составное выражение, включающее вызов [next_weekday]. *)
 
 Compute (next_weekday friday).
 (* ==> monday : day *)
@@ -124,12 +123,13 @@ Compute (next_weekday friday).
 Compute (next_weekday (next_weekday saturday)).
 (* ==> tuesday : day *)
 
-(** (We show Coq's responses in comments, but, if you have a
-    computer handy, this would be an excellent moment to fire up the
-    Coq interpreter under your favorite IDE -- either CoqIde or Proof
-    General -- and try it for yourself.  Load this file, [Basics.v],
-    from the book's Coq sources, find the above example, submit it to
-    Coq, and observe the result.) *)
+(** В книге мы будем показывать вывод программы в виде комментариев,
+    однако если у вас сейчас под рукой есть компьютер, то это
+    подходящий момент для того что бы запустить интерпретатор Coq в
+    вашей IDE и попробовать выполнить программу самому. Загрузите этот
+    [Basics.v] файл из исходников, приложенных к книге, найдите пример
+    сверху, и отправьте его в Coq что бы увидеть результат его
+    выполнения. *)
 
 (** Second, we can record what we _expect_ the result to be in the
     form of a Coq example: *)
