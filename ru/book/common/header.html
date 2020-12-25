@@ -11,6 +11,26 @@
 
 <script type="text/javascript" src="resources/config.js"></script>
 <script type="text/javascript" src="resources/coqdocjs.js"></script>
+
+<script>
+  // Hide delimiters
+  function hideDelimiters() {
+    const codes = Array.from(document.querySelectorAll('.code'));
+
+    codes.forEach(c => {
+
+      const hide =
+      /\(\*[\s]*[#=]+[\s]*\*\)/.test(c.innerText) ||
+      c.innerText.includes('ПОЖАЛУЙСТА НЕ ПУБЛИКУЙТЕ РЕШЕНИЯ');
+
+      if (hide) {
+        c.style.display = 'none';
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', hideDelimiters);
+</script>
 </head>
 
 <body onload="document.getElementById('content').focus()">
