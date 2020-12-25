@@ -15,13 +15,12 @@
 <script>
   // Hide delimiters
   function hideDelimiters() {
-    const codes = Array.from(document.querySelectorAll('.code'));
+    const codeElements = Array.from(document.querySelectorAll('.code'));
 
-    codes.forEach(c => {
-
+    codeElements.forEach(c => {
       const hide =
-      /\(\*[\s]*[#=]+[\s]*\*\)/.test(c.innerText) ||
-      c.innerText.includes('ПОЖАЛУЙСТА НЕ ПУБЛИКУЙТЕ РЕШЕНИЯ');
+        /\(\*[\s]*[#=]+[\s]*\*\)/.test(c.innerText) ||
+        c.innerText.includes('ПОЖАЛУЙСТА НЕ ПУБЛИКУЙТЕ РЕШЕНИЯ');
 
       if (hide) {
         c.style.display = 'none';
