@@ -150,6 +150,10 @@ Proof. simpl. reflexivity.  Qed.
     такой: "Только что сделанное утверждение может быть доказано, если
     обе стороны равенства значат одно и то же."
 
+    Прим. переводчика: [Qed] - quod erat demonstrandum — «что и
+    требовалось доказать», «ч. т. д.»; латинское выражение,
+    обозначающее завершение доказательства теоремы.
+
     Третий способ заключается в том, что бы попросить Coq извлечь
     [Definition], в виде программы на другом, более распространённом
     языке программирования (OCaml, Scheme, or Haskell), с
@@ -164,9 +168,9 @@ Proof. simpl. reflexivity.  Qed.
     разработан. Мы ещё вернёмся к этой теме в последующих главах. *)
 
 (* ================================================================= *)
-(** ** Homework Submission Guidelines *)
+(** ** Указания по публикации домашних заданий *)
 
-(** If you are using _Software Foundations_ in a course, your
+(** Если вы используете "Основы программного обеспечения" как часть курса, your
     instructor may use automatic scripts to help grade your homework
     assignments.  In order for these scripts to work correctly (and
     give you that you get full credit for your work!), please be
