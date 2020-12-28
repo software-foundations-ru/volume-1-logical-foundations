@@ -76,12 +76,23 @@ div:empty{ display: none;}
     font-family: 'Fira Code', monospace;
 }
 
+.code {
+    padding: 0.5em 0.5em;
+    margin-bottom: 12px;
+}
+
+.code,
 .inlinecode {
     background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+.inlinecode {
     padding: 0 0.5em;
 }
 
-.code > br:first-child {
+.code > br:first-child,
+.code > br:last-child {
   display: none;
 }
 

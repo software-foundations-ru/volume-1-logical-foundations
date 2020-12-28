@@ -170,31 +170,33 @@ Proof. simpl. reflexivity.  Qed.
 (* ================================================================= *)
 (** ** Указания по публикации домашних заданий *)
 
-(** Если вы используете "Основы программного обеспечения" как часть курса, your
-    instructor may use automatic scripts to help grade your homework
-    assignments.  In order for these scripts to work correctly (and
-    give you that you get full credit for your work!), please be
-    careful to follow these rules:
-      - The grading scripts work by extracting marked regions of the
-        [.v] files that you submit.  It is therefore important that
-        you do not alter the "markup" that delimits exercises: the
-        Exercise header, the name of the exercise, the "empty square
-        bracket" marker at the end, etc.  Please leave this markup
-        exactly as you find it.
-      - Do not delete exercises.  If you skip an exercise (e.g.,
-        because it is marked "optional," or because you can't solve it),
-        it is OK to leave a partial proof in your [.v] file; in
-        this case, please make sure it ends with [Admitted] (not, for
-        example [Abort]).
-      - It is fine to use additional definitions (of helper functions,
-        useful lemmas, etc.) in your solutions.  You can put these
-        between the exercise header and the theorem you are asked to
-        prove.
-      - If you introduce a helper lemma that you end up being unable
-        to prove, hence end it with [Admitted], then make sure to also
-        end the main theorem in which you use it with [Admitted], not
-        [Qed].  That will help you get partial credit, in case you
-        use that main theorem to solve a later exercise.
+(** Если вы проходите "Основы программного обеспечения" в рамках
+    университетского курса, то ваш преподаватель возможно будет
+    использовать автоматические скрипты для оценки домашних
+    заданий. Для того, что бы эти скрипты работали правильно (и вы
+    могли получить хорошую оценку!), придерживайтесь следующих правил:
+      - Скрипты для оценки работают путем нахождения специально
+        размеченных участков в [.v] файлах, которые вы сдаёте на
+        проверку. Поэтому важно что бы вы не меняли "разметку",
+        которая выделяет упражнения: заголовок Exercise, название
+        упражнения, пометку "пустые квадратные скобки" в конце, и
+        т.д. Пожалуйста оставте эту разметку в том же виде, в котором
+        вы её впервые увидели.
+      - Не удаляйте упражнения. Если вы решили пропуститить упражнение
+        (потому-что оно "опциональное" или вы его не смогли решить),
+        это нормально - оставить незаконченое доказательство в [.v]
+        файле. В этом случае удостоверьтесь что в конце оно помеченно
+        именно командой [Admitted], а не к примеру командой [Abort].
+      - Использовать в ваших решениях дополнительные определения
+        (вспомогательные функции, полезные леммы и т.п.) - это
+        стандартная практика. Вы можете поместить их между заголовком
+        упражнения и теоремой, которую вам требуется доказать.
+      - Если вы вводите впомогательную лемму, которую в итоге вы не
+        смогли доказать, помечайте её коммандой [Admitted] в конце, и
+        удостоверьтесь что основная теорема тоже помечена [Admitted],
+        а не [Qed]. Это даст возможность заработать часть баллов, в
+        случае если вы будете использовать основную теорему что бы
+        решить дальнейшие упражнения.
 
     You will also notice that each chapter (like [Basics.v]) is
     accompanied by a _test script_ ([BasicsTest.v]) that automatically

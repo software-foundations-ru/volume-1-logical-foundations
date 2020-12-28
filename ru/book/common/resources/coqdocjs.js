@@ -131,7 +131,7 @@ function foldProofs() {
         proof.setAttribute("animate", "");
         updateView();
       };}(proof));
-      proof.setAttribute("show", "false");
+      proof.setAttribute("show", "true");
     }
   });
 }

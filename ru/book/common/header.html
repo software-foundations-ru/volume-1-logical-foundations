@@ -20,7 +20,8 @@
     codeElements.forEach(c => {
       const hide =
         /\(\*[\s]*[#=]+[\s]*\*\)/.test(c.innerText) ||
-        c.innerText.includes('ПОЖАЛУЙСТА НЕ ПУБЛИКУЙТЕ РЕШЕНИЯ');
+        c.innerText.includes('ПОЖАЛУЙСТА НЕ ПУБЛИКУЙТЕ РЕШЕНИЯ') ||
+        c.innerText === ''; // hide empty
 
       if (hide) {
         c.style.display = 'none';
