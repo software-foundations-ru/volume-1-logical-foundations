@@ -244,8 +244,7 @@ Inductive bool : Type :=
   | true
   | false.
 
-(** Функции для работы с логическими данными можно определить таким же
-образом, как мы уже делали выше: *)
+(** Функции для работы с данными этого типа можно определить таким образом: *)
 
 Definition negb (b:bool) : bool :=
   match b with
@@ -265,17 +264,18 @@ Definition orb (b1:bool) (b2:bool) : bool :=
   | false => b2
   end.
 
-(** (Здесь мы сами определяем наш собственный логический тип
-(booleans), но Coq естественно имеет стандартную реализацию этого
-типа, как и множество функций и лемм для работы с ним. Там где это
-возможно, мы будем давать наши определения и теоремы таким образом,
-что бы они точно совпадали с такими же из стандартной библиотеки.) *)
+(** Здесь мы определяем наш собственный логический тип, но в Coq есть
+и стандартная реализация этого типа вместе со множеством полезных
+функций и лемм для работы с ним. Там где это возможно, мы будем
+составлять определения и теоремы таким образом, что бы они точно
+совпадали с такими же из стандартной библиотеки. *)
 
-(** The last two of these illustrate Coq's syntax for
-    multi-argument function definitions.  The corresponding
-    multi-argument application syntax is illustrated by the following
-    "unit tests," which constitute a complete specification -- a truth
-    table -- for the [orb] function: *)
+(** В последних двух определениях показан синтаксис Coq для
+    определения функции с несколькими аргументами. Соответствующий
+    синтаксис для применения функции с несколькими аргументами
+    проиллюстрирован в следующих "unit тестах", которые представляют
+    собой полную спецификацию функции [orb] в виде таблицы истинности:
+    *)
 
 Example test_orb1:  (orb true  false) = true.
 Proof. simpl. reflexivity.  Qed.
@@ -286,9 +286,10 @@ Proof. simpl. reflexivity.  Qed.
 Example test_orb4:  (orb true  true)  = true.
 Proof. simpl. reflexivity.  Qed.
 
-(** We can also introduce some familiar infix syntax for the
-    boolean operations we have just defined. The [Notation] command
-    defines a new symbolic notation for an existing definition. *)
+(** Давайте введём более привычный, инфиксный синтаксис для булевых
+    операций, которые мы только что определили. Команда [Notation]
+    задаёт новый способ написания для уже существующего
+    определения. *)
 
 Notation "x && y" := (andb x y).
 Notation "x || y" := (orb x y).
@@ -296,11 +297,12 @@ Notation "x || y" := (orb x y).
 Example test_orb5:  false || false || true = true.
 Proof. simpl. reflexivity. Qed.
 
-(** _A note on notation_: In [.v] files, we use square brackets
-    to delimit fragments of Coq code within comments; this convention,
-    also used by the [coqdoc] documentation tool, keeps them visually
-    separate from the surrounding text.  In the HTML version of the
-    files, these pieces of text appear in a [different font]. *)
+(** Примечание о нотации в книге: В [.v] файлах мы используем
+    квадратные скобки для обозначения Coq кода. Этот синтаксис, так же
+    используется инструментом для построения документации [coqdoc],
+    визуально отделяя эти участки от окружающего их текста. В HTML
+    версии книги, эти части будут выделены [другим шрифтом или CSS
+    стилями]. *)
 
 (** **** Exercise: 1 star, standard (nandb)
 
