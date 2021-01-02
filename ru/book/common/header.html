@@ -15,18 +15,15 @@
 <script>
   // Hide delimiters
   function hideDelimiters() {
-    const codeElements = Array.from(document.querySelectorAll('.code'));
+      Array.from(document.querySelectorAll('.code .comment')).forEach(c => {
+          const hide = /\(\*[\s]*[#=]+[\s]*\*\)/.test(c.innerText);
+          if (hide) { c.style.display = 'none'; }
+      });
 
-    codeElements.forEach(c => {
-      const hide =
-        /\(\*[\s]*[#=]+[\s]*\*\)/.test(c.innerText) ||
-        c.innerText.includes('ПОЖАЛУЙСТА НЕ ПУБЛИКУЙТЕ РЕШЕНИЯ') ||
-        c.innerText === ''; // hide empty
-
-      if (hide) {
-        c.style.display = 'none';
-      }
-    });
+      Array.from(document.querySelectorAll('.code')).forEach(c => {
+          const hide = c.innerText === ''  || c.innerText.includes('ПОЖАЛУЙСТА НЕ ПУБЛИКУЙТЕ РЕШЕНИЯ'); // hide empty
+          if (hide) { c.style.display = 'none'; }
+      });
   }
 
   document.addEventListener('DOMContentLoaded', hideDelimiters);

@@ -226,10 +226,12 @@ Proof. simpl. reflexivity.  Qed.
         пользуясь кнопкой "Add another file", рассположенной над
         областью с комментариями. *)
 
-(** The [Require Export] statement on the next line tells Coq to use
-    the [String] module from the standard library.  We'll use strings
-    ourselves in later chapters, but we need to [Require] it here so
-    that the grading scripts can use it for internal purposes. *)
+(** Стоящая на следующей строке команда [Require Export] говорит Coq
+использовать модуль [String] из стандартной библиотеки.  Мы будем
+пользоваться модулем строк в последующих главах, но мы должны
+подключить его уже здесь что бы оценочныее скрипты могли пользоваться
+им для внутренних нужд. *)
+
 From Coq Require Export String.
 
 (* ================================================================= *)
