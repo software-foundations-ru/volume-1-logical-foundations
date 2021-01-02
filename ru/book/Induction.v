@@ -196,7 +196,7 @@ Proof.
     variables, the [induction] tactic will automatically move them
     into the context as needed.) *)
 
-(** **** Exercise: 2 stars, standard, especially useful (basic_induction) 
+(** **** Exercise: 2 stars, standard, especially useful (basic_induction)
 
     Prove the following using induction. You might need previously
     proven results. *)
@@ -222,7 +222,7 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(** **** Exercise: 2 stars, standard (double_plus) 
+(** **** Exercise: 2 stars, standard (double_plus)
 
     Consider the following function, which doubles its argument: *)
 
@@ -239,7 +239,7 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(** **** Exercise: 2 stars, standard, optional (evenb_S) 
+(** **** Exercise: 2 stars, standard, optional (evenb_S)
 
     One inconvenient aspect of our definition of [evenb n] is the
     recursive call on [n - 2]. This makes proofs about [evenb n]
@@ -254,7 +254,7 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(** **** Exercise: 1 star, standard, optional (destruct_induction) 
+(** **** Exercise: 1 star, standard, optional (destruct_induction)
 
     Briefly explain the difference between the tactics [destruct]
     and [induction].
@@ -451,7 +451,7 @@ Proof.
     whereas the informal proof reminds the reader several times where
     things stand). *)
 
-(** **** Exercise: 2 stars, advanced, especially useful (plus_comm_informal) 
+(** **** Exercise: 2 stars, advanced, especially useful (plus_comm_informal)
 
     Translate your solution for [plus_comm] into an informal proof:
 
@@ -464,7 +464,7 @@ Proof.
 Definition manual_grade_for_plus_comm_informal : option (nat*string) := None.
 (** [] *)
 
-(** **** Exercise: 2 stars, standard, optional (eqb_refl_informal) 
+(** **** Exercise: 2 stars, standard, optional (eqb_refl_informal)
 
     Write an informal proof of the following theorem, using the
     informal proof of [plus_assoc] as a model.  Don't just
@@ -479,7 +479,7 @@ Definition manual_grade_for_plus_comm_informal : option (nat*string) := None.
 (* ################################################################# *)
 (** * More Exercises *)
 
-(** **** Exercise: 3 stars, standard, especially useful (mult_comm) 
+(** **** Exercise: 3 stars, standard, especially useful (mult_comm)
 
     Use [assert] to help prove [plus_swap].  You don't need to
     use induction yet. *)
@@ -499,7 +499,7 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(** **** Exercise: 3 stars, standard, optional (more_exercises) 
+(** **** Exercise: 3 stars, standard, optional (more_exercises)
 
     Take a piece of paper.  For each of the following theorems, first
     _think_ about whether (a) it can be proved using only
@@ -568,7 +568,7 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(** **** Exercise: 2 stars, standard, optional (plus_swap') 
+(** **** Exercise: 2 stars, standard, optional (plus_swap')
 
     The [replace] tactic allows you to specify a particular subterm to
    rewrite and what you want it rewritten to: [replace (t) with (u)]
@@ -585,7 +585,7 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(** **** Exercise: 3 stars, standard, especially useful (binary_commute) 
+(** **** Exercise: 3 stars, standard, especially useful (binary_commute)
 
     Recall the [incr] and [bin_to_nat] functions that you
     wrote for the [binary] exercise in the [Basics] chapter.  Prove
@@ -617,7 +617,7 @@ Proof.
 Definition manual_grade_for_binary_commute : option (nat*string) := None.
 (** [] *)
 
-(** **** Exercise: 5 stars, advanced (binary_inverse) 
+(** **** Exercise: 5 stars, advanced (binary_inverse)
 
     This is a further continuation of the previous exercises about
     binary numbers.  You may find you need to go back and change your
@@ -627,7 +627,7 @@ Definition manual_grade_for_binary_commute : option (nat*string) := None.
         numbers. *)
 
 Fixpoint nat_to_bin (n:nat) : bin
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _вашим_определением_ ." *). Admitted.
 
 (** Prove that, if we start with any [nat], convert it to binary, and
     convert it back, we get the same [nat] we started with.  (Hint: If
@@ -637,7 +637,7 @@ Fixpoint nat_to_bin (n:nat) : bin
 
 Theorem nat_bin_nat : forall n, bin_to_nat (nat_to_bin n) = n.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  (* ЗАПОЛНИТЕ ЗДЕСЬ *) Admitted.
 
 (* Do not modify the following line: *)
 Definition manual_grade_for_binary_inverse_a : option (nat*string) := None.
@@ -648,7 +648,7 @@ Definition manual_grade_for_binary_inverse_a : option (nat*string) := None.
         the same number we started with.  However, this is not the
         case!  Explain (in a comment) what the problem is. *)
 
-(* FILL IN HERE *)
+(* ЗАПОЛНИТЕ ЗДЕСЬ *)
 
 (* Do not modify the following line: *)
 Definition manual_grade_for_binary_inverse_b : option (nat*string) := None.
@@ -665,7 +665,7 @@ Definition manual_grade_for_binary_inverse_b : option (nat*string) := None.
         proof -- that will allow the main proof to make progress.) Don't
         define this using [nat_to_bin] and [bin_to_nat]! *)
 
-(* FILL IN HERE *)
+(* ЗАПОЛНИТЕ ЗДЕСЬ *)
 
 (* Do not modify the following line: *)
 Definition manual_grade_for_binary_inverse_c : option (nat*string) := None.

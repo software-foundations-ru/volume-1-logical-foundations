@@ -283,28 +283,28 @@ Proof. reflexivity. Qed.
 (* ----------------------------------------------------------------- *)
 (** *** Exercises *)
 
-(** **** Exercise: 2 stars, standard, especially useful (list_funs) 
+(** **** Exercise: 2 stars, standard, especially useful (list_funs)
 
     Complete the definitions of [nonzeros], [oddmembers], and
     [countoddmembers] below. Have a look at the tests to understand
     what these functions should do. *)
 
 Fixpoint nonzeros (l:natlist) : natlist
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _your_definition_ ." *). Admitted.
 
 Example test_nonzeros:
   nonzeros [0;1;0;2;3;0;0] = [1;2;3].
   (* FILL IN HERE *) Admitted.
 
 Fixpoint oddmembers (l:natlist) : natlist
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _your_definition_ ." *). Admitted.
 
 Example test_oddmembers:
   oddmembers [0;1;0;2;3;0;0] = [1;3].
   (* FILL IN HERE *) Admitted.
 
 Definition countoddmembers (l:natlist) : nat
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _your_definition_ ." *). Admitted.
 
 Example test_countoddmembers1:
   countoddmembers [1;0;3;1;4;5] = 4.
@@ -319,7 +319,7 @@ Example test_countoddmembers3:
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(** **** Exercise: 3 stars, advanced (alternate) 
+(** **** Exercise: 3 stars, advanced (alternate)
 
     Complete the following definition of [alternate], which
     interleaves two lists into one, alternating between elements taken
@@ -334,7 +334,7 @@ Example test_countoddmembers3:
     defining a new kind of pairs, but this is not the only way.)  *)
 
 Fixpoint alternate (l1 l2 : natlist) : natlist
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _your_definition_ ." *). Admitted.
 
 Example test_alternate1:
   alternate [1;2;3] [4;5;6] = [1;4;2;5;3;6].
@@ -362,13 +362,13 @@ Example test_alternate4:
 
 Definition bag := natlist.
 
-(** **** Exercise: 3 stars, standard, especially useful (bag_functions) 
+(** **** Exercise: 3 stars, standard, especially useful (bag_functions)
 
     Complete the following definitions for the functions
     [count], [sum], [add], and [member] for bags. *)
 
 Fixpoint count (v : nat) (s : bag) : nat
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _your_definition_ ." *). Admitted.
 
 (** All these proofs can be done just by [reflexivity]. *)
 
@@ -390,13 +390,13 @@ Example test_count2:              count 6 [1;2;3;1;4;1] = 0.
     using one or more functions that have already been defined.  *)
 
 Definition sum : bag -> bag -> bag
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _your_definition_ ." *). Admitted.
 
 Example test_sum1:              count 1 (sum [1;2;3] [1;4;1]) = 3.
  (* FILL IN HERE *) Admitted.
 
 Definition add (v : nat) (s : bag) : bag
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _your_definition_ ." *). Admitted.
 
 Example test_add1:                count 1 (add 1 [1;4;1]) = 3.
  (* FILL IN HERE *) Admitted.
@@ -404,7 +404,7 @@ Example test_add2:                count 5 (add 1 [1;4;1]) = 0.
  (* FILL IN HERE *) Admitted.
 
 Definition member (v : nat) (s : bag) : bool
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _your_definition_ ." *). Admitted.
 
 Example test_member1:             member 1 [1;4;1] = true.
  (* FILL IN HERE *) Admitted.
@@ -413,7 +413,7 @@ Example test_member2:             member 2 [1;4;1] = false.
 (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(** **** Exercise: 3 stars, standard, optional (bag_more_functions) 
+(** **** Exercise: 3 stars, standard, optional (bag_more_functions)
 
     Here are some more [bag] functions for you to practice with. *)
 
@@ -424,7 +424,7 @@ Example test_member2:             member 2 [1;4;1] = false.
     exercise.) *)
 
 Fixpoint remove_one (v : nat) (s : bag) : bag
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _your_definition_ ." *). Admitted.
 
 Example test_remove_one1:
   count 5 (remove_one 5 [2;1;5;4;1]) = 0.
@@ -443,7 +443,7 @@ Example test_remove_one4:
   (* FILL IN HERE *) Admitted.
 
 Fixpoint remove_all (v:nat) (s:bag) : bag
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _your_definition_ ." *). Admitted.
 
 Example test_remove_all1:  count 5 (remove_all 5 [2;1;5;4;1]) = 0.
  (* FILL IN HERE *) Admitted.
@@ -455,7 +455,7 @@ Example test_remove_all4:  count 5 (remove_all 5 [2;1;5;4;5;1;4;5;1;4]) = 0.
  (* FILL IN HERE *) Admitted.
 
 Fixpoint subset (s1 : bag) (s2 : bag) : bool
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _your_definition_ ." *). Admitted.
 
 Example test_subset1:              subset [1;2] [2;1;4;1] = true.
  (* FILL IN HERE *) Admitted.
@@ -463,7 +463,7 @@ Example test_subset2:              subset [1;2;2] [2;1;4;1] = false.
  (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(** **** Exercise: 2 stars, standard, especially useful (add_inc_count) 
+(** **** Exercise: 2 stars, standard, especially useful (add_inc_count)
 
     Adding a value to a bag should increase the value's count by one.
     State that as a theorem and prove it. *)
@@ -807,7 +807,7 @@ Search (?x + ?y = ?y + ?x).
 (* ================================================================= *)
 (** ** List Exercises, Part 1 *)
 
-(** **** Exercise: 3 stars, standard (list_exercises) 
+(** **** Exercise: 3 stars, standard (list_exercises)
 
     More practice with lists: *)
 
@@ -843,14 +843,14 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(** **** Exercise: 2 stars, standard (eqblist) 
+(** **** Exercise: 2 stars, standard (eqblist)
 
     Fill in the definition of [eqblist], which compares
     lists of numbers for equality.  Prove that [eqblist l l]
     yields [true] for every list [l]. *)
 
 Fixpoint eqblist (l1 l2 : natlist) : bool
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _your_definition_ ." *). Admitted.
 
 Example test_eqblist1 :
   (eqblist nil nil = true).
@@ -903,7 +903,7 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(** **** Exercise: 3 stars, standard, optional (bag_count_sum) 
+(** **** Exercise: 3 stars, standard, optional (bag_count_sum)
 
     Write down an interesting theorem [bag_count_sum] about bags
     involving the functions [count] and [sum], and prove it using
@@ -913,7 +913,7 @@ Proof.
 
     [] *)
 
-(** **** Exercise: 4 stars, advanced (rev_injective) 
+(** **** Exercise: 4 stars, advanced (rev_injective)
 
     Prove that the [rev] function is injective. There is a hard way
     and an easy way to do this. *)
@@ -1005,33 +1005,33 @@ Definition option_elim (d : nat) (o : natoption) : nat :=
   | None => d
   end.
 
-(** **** Exercise: 2 stars, standard (hd_error) 
+(** **** Exercise: 2 stars, standard (hd_error)
 
     Using the same idea, fix the [hd] function from earlier so we don't
     have to pass a default element for the [nil] case.  *)
 
 Definition hd_error (l : natlist) : natoption
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _вашим_определением_ ." *). Admitted.
 
 Example test_hd_error1 : hd_error [] = None.
- (* FILL IN HERE *) Admitted.
+ (* ЗАПОЛНИТЕ ЗДЕСЬ *) Admitted.
 
 Example test_hd_error2 : hd_error [1] = Some 1.
- (* FILL IN HERE *) Admitted.
+ (* ЗАПОЛНИТЕ ЗДЕСЬ *) Admitted.
 
 Example test_hd_error3 : hd_error [5;6] = Some 5.
- (* FILL IN HERE *) Admitted.
+ (* ЗАПОЛНИТЕ ЗДЕСЬ *) Admitted.
 
 (** [] *)
 
-(** **** Exercise: 1 star, standard, optional (option_elim_hd) 
+(** **** Exercise: 1 star, standard, optional (option_elim_hd)
 
     This exercise relates your new [hd_error] to the old [hd]. *)
 
 Theorem option_elim_hd : forall (l:natlist) (default:nat),
   hd default l = option_elim default (hd_error l).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  (* ЗАПОЛНИТЕ ЗДЕСЬ *) Admitted.
 (** [] *)
 
 End NatList.
@@ -1064,7 +1064,7 @@ Definition eqb_id (x1 x2 : id) :=
 (** **** Exercise: 1 star, standard (eqb_id_refl)  *)
 Theorem eqb_id_refl : forall x, true = eqb_id x x.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  (* ЗАПОЛНИТЕ ЗДЕСЬ *) Admitted.
 (** [] *)
 
 (** Now we define the type of partial maps: *)
@@ -1110,7 +1110,7 @@ Theorem update_eq :
   forall (d : partial_map) (x : id) (v: nat),
     find x (update d x v) = Some v.
 Proof.
- (* FILL IN HERE *) Admitted.
+ (* ЗАПОЛНИТЕ ЗДЕСЬ *) Admitted.
 (** [] *)
 
 (** **** Exercise: 1 star, standard (update_neq)  *)
@@ -1118,11 +1118,11 @@ Theorem update_neq :
   forall (d : partial_map) (x y : id) (o: nat),
     eqb_id x y = false -> find x (update d y o) = find x d.
 Proof.
- (* FILL IN HERE *) Admitted.
+ (* ЗАПОЛНИТЕ ЗДЕСЬ *) Admitted.
 (** [] *)
 End PartialMap.
 
-(** **** Exercise: 2 stars, standard, optional (baz_num_elts) 
+(** **** Exercise: 2 stars, standard, optional (baz_num_elts)
 
     Consider the following inductive definition: *)
 
@@ -1133,7 +1133,7 @@ Inductive baz : Type :=
 (** How _many_ elements does the type [baz] have? (Explain in words,
     in a comment.) *)
 
-(* FILL IN HERE *)
+(* ЗАПОЛНИТЕ ЗДЕСЬ *)
 
 (* Do not modify the following line: *)
 Definition manual_grade_for_baz_num_elts : option (nat*string) := None.

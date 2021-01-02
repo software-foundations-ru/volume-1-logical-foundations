@@ -436,7 +436,7 @@ Qed.
 Lemma re_opt_match' : forall T (re: reg_exp T) s,
     s =~ re -> s =~ re_opt re.
 Proof.
-(* FILL IN HERE *) Admitted.
+(* ЗАПОЛНИТЕ ЗДЕСЬ *) Admitted.
 (* Do not modify the following line: *)
 Definition manual_grade_for_re_opt : option (nat*string) := None.
 (** [] *)
@@ -723,7 +723,7 @@ Example auto_example_7' : forall x,
 Proof. info_auto. Qed.
 
 
-(** **** Exercise: 3 stars, advanced (pumping_redux) 
+(** **** Exercise: 3 stars, advanced (pumping_redux)
 
     Use [auto], [lia], and any other useful tactics from this chapter to
     shorten your proof (or the "official" solution proof) of the weak Pumping
@@ -737,12 +737,12 @@ Lemma weak_pumping : forall T (re : reg_exp T) s,
     s2 <> [] /\
     forall m, s1 ++ napp m s2 ++ s3 =~ re.
 Proof.
-(* FILL IN HERE *) Admitted.
+(* ЗАПОЛНИТЕ ЗДЕСЬ *) Admitted.
 (* Do not modify the following line: *)
 Definition manual_grade_for_pumping_redux : option (nat*string) := None.
 (** [] *)
 
-(** **** Exercise: 3 stars, advanced, optional (pumping_redux_strong) 
+(** **** Exercise: 3 stars, advanced, optional (pumping_redux_strong)
 
     Use [auto], [lia], and any other useful tactics from this chapter to
     shorten your proof (or the "official" solution proof) of the stronger
@@ -757,7 +757,7 @@ Lemma pumping : forall T (re : reg_exp T) s,
     length s1 + length s2 <= pumping_constant re /\
     forall m, s1 ++ napp m s2 ++ s3 =~ re.
 Proof.
-(* FILL IN HERE *) Admitted.
+(* ЗАПОЛНИТЕ ЗДЕСЬ *) Admitted.
 (* Do not modify the following line: *)
 Definition manual_grade_for_pumping_redux_strong : option (nat*string) := None.
 (** [] *)

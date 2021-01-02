@@ -66,7 +66,7 @@ Proof.
   intros n m eq1 eq2.
   apply eq2. apply eq1.  Qed.
 
-(** **** Exercise: 2 stars, standard, optional (silly_ex) 
+(** **** Exercise: 2 stars, standard, optional (silly_ex)
 
     Complete the following proof using only [intros] and [apply]. *)
 
@@ -98,7 +98,7 @@ Proof.
              simplification first, if needed.) *)
   apply H.  Qed.
 
-(** **** Exercise: 3 stars, standard (apply_exercise1) 
+(** **** Exercise: 3 stars, standard (apply_exercise1)
 
     _Hint_: You can use [apply] with previously defined lemmas, not
     just hypotheses in the context.  You may find earlier lemmas like
@@ -114,7 +114,7 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(** **** Exercise: 1 star, standard, optional (apply_rewrite) 
+(** **** Exercise: 1 star, standard, optional (apply_rewrite)
 
     Briefly explain the difference between the tactics [apply] and
     [rewrite].  What are the situations where both can usefully be
@@ -603,7 +603,7 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(** **** Exercise: 2 stars, advanced (eqb_true_informal) 
+(** **** Exercise: 2 stars, advanced (eqb_true_informal)
 
     Give a careful informal proof of [eqb_true], being as explicit
     as possible about quantifiers. *)
@@ -614,7 +614,7 @@ Proof.
 Definition manual_grade_for_informal_proof : option (nat*string) := None.
 (** [] *)
 
-(** **** Exercise: 3 stars, standard, especially useful (plus_n_n_injective) 
+(** **** Exercise: 3 stars, standard, especially useful (plus_n_n_injective)
 
     In addition to being careful about how you use [intros], practice
     using "in" variants in this proof.  (Hint: use [plus_n_Sm].) *)
@@ -721,7 +721,7 @@ Proof.
         that [S n' = S m'].  Since [S n' = n] and [S m' = m], this is just
         what we wanted to show. [] *)
 
-(** **** Exercise: 3 stars, standard, especially useful (gen_dep_practice) 
+(** **** Exercise: 3 stars, standard, especially useful (gen_dep_practice)
 
     Prove this by induction on [l]. *)
 
@@ -892,7 +892,7 @@ Proof.
     in which all occurrences of [e] (in the goal and in the context)
     are replaced by [c]. *)
 
-(** **** Exercise: 3 stars, standard (combine_split) 
+(** **** Exercise: 3 stars, standard (combine_split)
 
     Here is an implementation of the [split] function mentioned in
     chapter [Poly]: *)
@@ -1073,7 +1073,7 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(** **** Exercise: 3 stars, advanced, optional (eqb_sym_informal) 
+(** **** Exercise: 3 stars, advanced, optional (eqb_sym_informal)
 
     Give an informal proof of this lemma that corresponds to your
     formal proof above:
@@ -1094,7 +1094,7 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(** **** Exercise: 3 stars, advanced (split_combine) 
+(** **** Exercise: 3 stars, advanced (split_combine)
 
     We proved, in an exercise above, that for all lists of pairs,
     [combine] is the inverse of [split].  How would you formalize the
@@ -1111,7 +1111,7 @@ Proof.
 Definition split_combine_statement : Prop
   (* ("[: Prop]" means that we are giving a name to a
      logical proposition here.) *)
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _your_definition_ ." *). Admitted.
 
 Theorem split_combine : split_combine_statement.
 Proof.
@@ -1121,7 +1121,7 @@ Proof.
 Definition manual_grade_for_split_combine : option (nat*string) := None.
 (** [] *)
 
-(** **** Exercise: 3 stars, advanced (filter_exercise) 
+(** **** Exercise: 3 stars, advanced (filter_exercise)
 
     This one is a bit challenging.  Pay attention to the form of your
     induction hypothesis. *)
@@ -1134,7 +1134,7 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(** **** Exercise: 4 stars, advanced, especially useful (forall_exists_challenge) 
+(** **** Exercise: 4 stars, advanced, especially useful (forall_exists_challenge)
 
     Define two recursive [Fixpoints], [forallb] and [existsb].  The
     first checks whether every element in a list satisfies a given
@@ -1167,7 +1167,7 @@ Proof.
 *)
 
 Fixpoint forallb {X : Type} (test : X -> bool) (l : list X) : bool
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _your_definition_ ." *). Admitted.
 
 Example test_forallb_1 : forallb oddb [1;3;5;7;9] = true.
 Proof. (* FILL IN HERE *) Admitted.
@@ -1182,7 +1182,7 @@ Example test_forallb_4 : forallb (eqb 5) [] = true.
 Proof. (* FILL IN HERE *) Admitted.
 
 Fixpoint existsb {X : Type} (test : X -> bool) (l : list X) : bool
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _your_definition_ ." *). Admitted.
 
 Example test_existsb_1 : existsb (eqb 5) [0;2;3;6] = false.
 Proof. (* FILL IN HERE *) Admitted.
@@ -1197,11 +1197,11 @@ Example test_existsb_4 : existsb evenb [] = false.
 Proof. (* FILL IN HERE *) Admitted.
 
 Definition existsb' {X : Type} (test : X -> bool) (l : list X) : bool
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _вашим_определением_ ." *). Admitted.
 
 Theorem existsb_existsb' : forall (X : Type) (test : X -> bool) (l : list X),
   existsb test l = existsb' test l.
-Proof. (* FILL IN HERE *) Admitted.
+Proof. (* ЗАПОЛНИТЕ ЗДЕСЬ *) Admitted.
 
 (** [] *)
 

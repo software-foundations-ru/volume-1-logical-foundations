@@ -172,7 +172,7 @@ Print ev_4''.
 Print ev_4'''.
 (* ===> ev_4''' =   ev_SS 2 (ev_SS 0 ev_0) : ev 4 *)
 
-(** **** Exercise: 2 stars, standard (eight_is_even) 
+(** **** Exercise: 2 stars, standard (eight_is_even)
 
     Give a tactic proof and a proof object showing that [ev 8]. *)
 
@@ -181,7 +181,7 @@ Proof.
   (* FILL IN HERE *) Admitted.
 
 Definition ev_8' : ev 8
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _your_definition_ ." *). Admitted.
 (** [] *)
 
 (* ################################################################# *)
@@ -391,12 +391,12 @@ Definition and_comm'_aux P Q (H : P /\ Q) : Q /\ P :=
 Definition and_comm' P Q : P /\ Q <-> Q /\ P :=
   conj (and_comm'_aux P Q) (and_comm'_aux Q P).
 
-(** **** Exercise: 2 stars, standard (conj_fact) 
+(** **** Exercise: 2 stars, standard (conj_fact)
 
     Construct a proof object for the following proposition. *)
 
 Definition conj_fact : forall P Q R, P /\ Q -> Q /\ R -> P /\ R
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _your_definition_ ." *). Admitted.
 (** [] *)
 
 (* ================================================================= *)
@@ -448,12 +448,12 @@ Qed.
 
 End Or.
 
-(** **** Exercise: 2 stars, standard (or_commut') 
+(** **** Exercise: 2 stars, standard (or_commut')
 
     Construct a proof object for the following proposition. *)
 
 Definition or_commut' : forall P Q, P \/ Q -> Q \/ P
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _your_definition_ ." *). Admitted.
 (** [] *)
 
 (* ================================================================= *)
@@ -494,12 +494,12 @@ Check ex (fun n => ev n) : Prop.
 Definition some_nat_is_even : exists n, ev n :=
   ex_intro ev 4 (ev_SS 2 (ev_SS 0 ev_0)).
 
-(** **** Exercise: 2 stars, standard (ex_ev_Sn) 
+(** **** Exercise: 2 stars, standard (ex_ev_Sn)
 
     Construct a proof object for the following proposition. *)
 
 Definition ex_ev_Sn : ex (fun n => ev (S n))
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _your_definition_ ." *). Admitted.
 (** [] *)
 
 (* ================================================================= *)
@@ -513,12 +513,12 @@ Inductive True : Prop :=
 (** It has one constructor (so every proof of [True] is the same, so
     being given a proof of [True] is not informative.) *)
 
-(** **** Exercise: 1 star, standard (p_implies_true) 
+(** **** Exercise: 1 star, standard (p_implies_true)
 
     Construct a proof object for the following proposition. *)
 
 Definition p_implies_true : forall P, P -> True
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _your_definition_ ." *). Admitted.
 (** [] *)
 
 (** [False] is equally simple -- indeed, so simple it may look
@@ -548,12 +548,12 @@ Definition false_implies_zero_eq_one : False -> 0 = 1 :=
     because we can never construct a value of type [False] to pass to
     the function. *)
 
-(** **** Exercise: 1 star, standard (ex_falso_quodlibet') 
+(** **** Exercise: 1 star, standard (ex_falso_quodlibet')
 
     Construct a proof object for the following proposition. *)
 
 Definition ex_falso_quodlibet' : forall P, False -> P
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _вашим_определением_ ." *). Admitted.
 (** [] *)
 
 End Props.
@@ -617,7 +617,7 @@ Definition four' : 2 + 2 == 1 + 3 :=
 Definition singleton : forall (X:Type) (x:X), []++[x] == x::[]  :=
   fun (X:Type) (x:X) => eq_refl [x].
 
-(** **** Exercise: 2 stars, standard (equality__leibniz_equality) 
+(** **** Exercise: 2 stars, standard (equality__leibniz_equality)
 
     The inductive definition of equality implies _Leibniz equality_:
     what we mean when we say "[x] and [y] are equal" is that every
@@ -626,10 +626,10 @@ Definition singleton : forall (X:Type) (x:X), []++[x] == x::[]  :=
 Lemma equality__leibniz_equality : forall (X : Type) (x y: X),
   x == y -> forall P:X->Prop, P x -> P y.
 Proof.
-(* FILL IN HERE *) Admitted.
+(* ЗАПОЛНИТЕ ЗДЕСЬ *) Admitted.
 (** [] *)
 
-(** **** Exercise: 3 stars, standard, optional (leibniz_equality__equality) 
+(** **** Exercise: 3 stars, standard, optional (leibniz_equality__equality)
 
     Show that, in fact, the inductive definition of equality is
     _equivalent_ to Leibniz equality.  Hint: the proof is quite short;
@@ -639,7 +639,7 @@ Proof.
 Lemma leibniz_equality__equality : forall (X : Type) (x y: X),
   (forall P:X->Prop, P x -> P y) -> x == y.
 Proof.
-(* FILL IN HERE *) Admitted.
+(* ЗАПОЛНИТЕ ЗДЕСЬ *) Admitted.
 
 (** [] *)
 

@@ -98,21 +98,21 @@ Proof.
     - apply le_S. apply le_n. }
   discriminate Nonsense.   Qed.
 
-(** **** Exercise: 2 stars, standard, optional (total_relation_not_partial) 
+(** **** Exercise: 2 stars, standard, optional (total_relation_not_partial)
 
     Show that the [total_relation] defined in (an exercise in)
     [IndProp] is not a partial function. *)
 
-(* FILL IN HERE
+(* ЗАПОЛНИТЕ ЗДЕСЬ
 
     [] *)
 
-(** **** Exercise: 2 stars, standard, optional (empty_relation_partial) 
+(** **** Exercise: 2 stars, standard, optional (empty_relation_partial)
 
     Show that the [empty_relation] defined in (an exercise in)
     [IndProp] is a partial function. *)
 
-(* FILL IN HERE
+(* ЗАПОЛНИТЕ ЗДЕСЬ
 
     [] *)
 
@@ -157,7 +157,7 @@ Proof.
   apply Hnm.
   apply Hmo. Qed.
 
-(** **** Exercise: 2 stars, standard, optional (le_trans_hard_way) 
+(** **** Exercise: 2 stars, standard, optional (le_trans_hard_way)
 
     We can also prove [lt_trans] more laboriously by induction,
     without using [le_trans].  Do this. *)
@@ -169,10 +169,10 @@ Proof.
   unfold lt. unfold transitive.
   intros n m o Hnm Hmo.
   induction Hmo as [| m' Hm'o].
-    (* FILL IN HERE *) Admitted.
+    (* ЗАПОЛНИТЕ ЗДЕСЬ *) Admitted.
 (** [] *)
 
-(** **** Exercise: 2 stars, standard, optional (lt_trans'') 
+(** **** Exercise: 2 stars, standard, optional (lt_trans'')
 
     Prove the same thing again by induction on [o]. *)
 
@@ -182,7 +182,7 @@ Proof.
   unfold lt. unfold transitive.
   intros n m o Hnm Hmo.
   induction o as [| o'].
-  (* FILL IN HERE *) Admitted.
+  (* ЗАПОЛНИТЕ ЗДЕСЬ *) Admitted.
 (** [] *)
 
 (** The transitivity of [le], in turn, can be used to prove some facts
@@ -200,10 +200,10 @@ Qed.
 Theorem le_S_n : forall n m,
   (S n <= S m) -> (n <= m).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  (* ЗАПОЛНИТЕ ЗДЕСЬ *) Admitted.
 (** [] *)
 
-(** **** Exercise: 2 stars, standard, optional (le_Sn_n_inf) 
+(** **** Exercise: 2 stars, standard, optional (le_Sn_n_inf)
 
     Provide an informal proof of the following theorem:
 
@@ -213,7 +213,7 @@ Proof.
     writing an informal proof without doing the formal proof first.
 
     Proof: *)
-    (* FILL IN HERE
+    (* ЗАПОЛНИТЕ ЗДЕСЬ
 
     [] *)
 
@@ -221,7 +221,7 @@ Proof.
 Theorem le_Sn_n : forall n,
   ~ (S n <= n).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  (* ЗАПОЛНИТЕ ЗДЕСЬ *) Admitted.
 (** [] *)
 
 (** Reflexivity and transitivity are the main concepts we'll need for
@@ -240,7 +240,7 @@ Definition symmetric {X: Type} (R: relation X) :=
 Theorem le_not_symmetric :
   ~ (symmetric le).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  (* ЗАПОЛНИТЕ ЗДЕСЬ *) Admitted.
 (** [] *)
 
 (** A relation [R] is _antisymmetric_ if [R a b] and [R b a] together
@@ -254,7 +254,7 @@ Definition antisymmetric {X: Type} (R: relation X) :=
 Theorem le_antisymmetric :
   antisymmetric le.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  (* ЗАПОЛНИТЕ ЗДЕСЬ *) Admitted.
 (** [] *)
 
 (** **** Exercise: 2 stars, standard, optional (le_step)  *)
@@ -263,7 +263,7 @@ Theorem le_step : forall n m p,
   m <= S p ->
   n <= p.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  (* ЗАПОЛНИТЕ ЗДЕСЬ *) Admitted.
 (** [] *)
 
 (* ----------------------------------------------------------------- *)
@@ -379,7 +379,7 @@ Lemma rsc_trans :
       clos_refl_trans_1n R y z ->
       clos_refl_trans_1n R x z.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  (* ЗАПОЛНИТЕ ЗДЕСЬ *) Admitted.
 (** [] *)
 
 (** Then we use these facts to prove that the two definitions of
@@ -391,7 +391,7 @@ Theorem rtc_rsc_coincide :
          forall (X:Type) (R: relation X) (x y : X),
   clos_refl_trans R x y <-> clos_refl_trans_1n R x y.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  (* ЗАПОЛНИТЕ ЗДЕСЬ *) Admitted.
 (** [] *)
 
 (* 2020-09-09 20:51 *)

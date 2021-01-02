@@ -437,7 +437,7 @@ Admitted.
     simply means that we have failed to construct a proof, not that we
     have constructed a wrong one. *)
 
-(** **** Exercise: 3 stars, standard (optimize_0plus_b_sound) 
+(** **** Exercise: 3 stars, standard (optimize_0plus_b_sound)
 
     Since the [optimize_0plus] transformation doesn't change the value
     of [aexp]s, we should be able to apply it to all the [aexp]s that
@@ -447,7 +447,7 @@ Admitted.
     as elegant as possible. *)
 
 Fixpoint optimize_0plus_b (b : bexp) : bexp
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _your_definition_ ." *). Admitted.
 
 Theorem optimize_0plus_b_sound : forall b,
   beval (optimize_0plus_b b) = beval b.
@@ -455,7 +455,7 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(** **** Exercise: 4 stars, standard, optional (optimize) 
+(** **** Exercise: 4 stars, standard, optional (optimize)
 
     _Design exercise_: The optimization implemented by our
     [optimize_0plus] function is only one of many possible
@@ -727,7 +727,7 @@ Inductive aevalR : aexp -> nat -> Prop :=
                          AMult e1 e2 ==> n1*n2
 *)
 
-(** **** Exercise: 1 star, standard, optional (beval_rules) 
+(** **** Exercise: 1 star, standard, optional (beval_rules)
 
     Here, again, is the Coq definition of the [beval] function:
 
@@ -806,7 +806,7 @@ Proof.
        try apply IHa1; try apply IHa2; reflexivity.
 Qed.
 
-(** **** Exercise: 3 stars, standard (bevalR) 
+(** **** Exercise: 3 stars, standard (bevalR)
 
     Write a relation [bevalR] in the same style as
     [aevalR], and prove that it is equivalent to [beval]. *)
@@ -1511,7 +1511,7 @@ Proof.
 Set Printing Implicit.
 Check @ceval_example2.
 
-(** **** Exercise: 3 stars, standard, optional (pup_to_n) 
+(** **** Exercise: 3 stars, standard, optional (pup_to_n)
 
     Write an Imp program that sums the numbers from [1] to [X]
     (inclusive: [1 + 2 + ... + X]) in the variable [Y].  Your program
@@ -1520,7 +1520,7 @@ Check @ceval_example2.
     write.  The proof of that theorem will be somewhat lengthy. *)
 
 Definition pup_to_n : com
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _your_definition_ ." *). Admitted.
 
 Theorem pup_to_2_ceval :
   (X !-> 2) =[
@@ -1598,7 +1598,7 @@ Proof.
   inversion Heval. subst. clear Heval. simpl.
   apply t_update_eq.  Qed.
 
-(** **** Exercise: 3 stars, standard, optional (XtimesYinZ_spec) 
+(** **** Exercise: 3 stars, standard, optional (XtimesYinZ_spec)
 
     State and prove a specification of [XtimesYinZ]. *)
 
@@ -1624,7 +1624,7 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(** **** Exercise: 3 stars, standard (no_whiles_eqv) 
+(** **** Exercise: 3 stars, standard (no_whiles_eqv)
 
     Consider the following function: *)
 
@@ -1657,7 +1657,7 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(** **** Exercise: 4 stars, standard (no_whiles_terminating) 
+(** **** Exercise: 4 stars, standard (no_whiles_terminating)
 
     Imp programs that don't involve while loops always terminate.
     State and prove a theorem [no_whiles_terminating] that says this.
@@ -1673,7 +1673,7 @@ Definition manual_grade_for_no_whiles_terminating : option (nat*string) := None.
 (* ################################################################# *)
 (** * Additional Exercises *)
 
-(** **** Exercise: 3 stars, standard (stack_compiler) 
+(** **** Exercise: 3 stars, standard (stack_compiler)
 
     Old HP Calculators, programming languages like Forth and Postscript,
     and abstract machines like the Java Virtual Machine all evaluate
@@ -1736,7 +1736,7 @@ Inductive sinstr : Type :=
 Fixpoint s_execute (st : state) (stack : list nat)
                    (prog : list sinstr)
                  : list nat
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _your_definition_ ." *). Admitted.
 
 Check s_execute.
 
@@ -1757,7 +1757,7 @@ Example s_execute2 :
     same as pushing the value of the expression on the stack. *)
 
 Fixpoint s_compile (e : aexp) : list sinstr
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _вашим_определением_ ." *). Admitted.
 
 (** After you've defined [s_compile], prove the following to test
     that it works. *)
@@ -1765,7 +1765,7 @@ Fixpoint s_compile (e : aexp) : list sinstr
 Example s_compile1 :
   s_compile <{ X - (2 * Y) }>
   = [SLoad X; SPush 2; SLoad Y; SMult; SMinus].
-(* FILL IN HERE *) Admitted.
+(* МЕСТО ДЛЯ ЗАПОЛНЕНИЯ *) Admitted.
 (** [] *)
 
 (** **** Exercise: 3 stars, standard (execute_app)  *)
@@ -1778,7 +1778,7 @@ Example s_compile1 :
 Theorem execute_app : forall st p1 p2 stack,
     s_execute st stack (p1 ++ p2) = s_execute st (s_execute st stack p1) p2.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  (* МЕСТО ДЛЯ ЗАПОЛНЕНИЯ *) Admitted.
 
 (** [] *)
 
@@ -1792,18 +1792,18 @@ Proof.
 Lemma s_compile_correct_aux : forall st e stack,
   s_execute st stack (s_compile e) = aeval st e :: stack.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  (* МЕСТО ДЛЯ ЗАПОЛНЕНИЯ *) Admitted.
 
 (** The main theorem should be a very easy corollary of that lemma. *)
 
 Theorem s_compile_correct : forall (st : state) (e : aexp),
   s_execute st [] (s_compile e) = [ aeval st e ].
 Proof.
-  (* FILL IN HERE *) Admitted.
+  (* МЕСТО ДЛЯ ЗАПОЛНЕНИЯ *) Admitted.
 
 (** [] *)
 
-(** **** Exercise: 3 stars, standard, optional (short_circuit) 
+(** **** Exercise: 3 stars, standard, optional (short_circuit)
 
     Most modern programming languages use a "short-circuit" evaluation
     rule for boolean [and]: to evaluate [BAnd b1 b2], first evaluate
@@ -1820,12 +1820,12 @@ Proof.
     would _not_ be equivalent to the original, since it would make more
     programs terminate.) *)
 
-(* FILL IN HERE
+(* МЕСТО ДЛЯ ЗАПОЛНЕНИЯ
 
     [] *)
 
 Module BreakImp.
-(** **** Exercise: 4 stars, advanced (break_imp) 
+(** **** Exercise: 4 stars, advanced (break_imp)
 
     Imperative languages like C and Java often include a [break] or
     similar statement for interrupting the execution of loops. In this
@@ -1941,12 +1941,12 @@ Reserved Notation "st '=[' c ']=>' st' '/' s"
 (** Based on the above description, complete the definition of the
     [ceval] relation. *)
 
-(* FILL IN HERE *)
+(* МЕСТО ДЛЯ ЗАПОЛНЕНИЯ *)
 
 Inductive ceval : com -> state -> result -> state -> Prop :=
   | E_Skip : forall st,
       st =[ CSkip ]=> st / SContinue
-  (* FILL IN HERE *)
+  (* МЕСТО ДЛЯ ЗАПОЛНЕНИЯ *)
 
   where "st '=[' c ']=>' st' '/' s" := (ceval c st s st').
 
@@ -1956,20 +1956,20 @@ Theorem break_ignore : forall c st st' s,
      st =[ break; c ]=> st' / s ->
      st = st'.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  (* МЕСТО ДЛЯ ЗАПОЛНЕНИЯ *) Admitted.
 
 Theorem while_continue : forall b c st st' s,
   st =[ while b do c end ]=> st' / s ->
   s = SContinue.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  (* МЕСТО ДЛЯ ЗАПОЛНЕНИЯ *) Admitted.
 
 Theorem while_stops_on_break : forall b c st st',
   beval st b = true ->
   st =[ c ]=> st' / SBreak ->
   st =[ while b do c end ]=> st' / SContinue.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  (* МЕСТО ДЛЯ ЗАПОЛНЕНИЯ *) Admitted.
 (** [] *)
 
 (** **** Exercise: 3 stars, advanced, optional (while_break_true)  *)
@@ -1978,7 +1978,7 @@ Theorem while_break_true : forall b c st st',
   beval st' b = true ->
   exists st'', st'' =[ c ]=> st' / SBreak.
 Proof.
-(* FILL IN HERE *) Admitted.
+(* МЕСТО ДЛЯ ЗАПОЛНЕНИЯ *) Admitted.
 (** [] *)
 
 (** **** Exercise: 4 stars, advanced, optional (ceval_deterministic)  *)
@@ -1987,12 +1987,12 @@ Theorem ceval_deterministic: forall (c:com) st st1 st2 s1 s2,
      st =[ c ]=> st2 / s2 ->
      st1 = st2 /\ s1 = s2.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  (* МЕСТО ДЛЯ ЗАПОЛНЕНИЯ *) Admitted.
 
 (** [] *)
 End BreakImp.
 
-(** **** Exercise: 4 stars, standard, optional (add_for_loop) 
+(** **** Exercise: 4 stars, standard, optional (add_for_loop)
 
     Add C-style [for] loops to the language of commands, update the
     [ceval] definition to define the semantics of [for] loops, and add
@@ -2007,7 +2007,7 @@ End BreakImp.
     about making up a concrete Notation for [for] loops, but feel free
     to play with this too if you like.) *)
 
-(* FILL IN HERE
+(* МЕСТО ДЛЯ ЗАПОЛНЕНИЯ
 
     [] *)
 

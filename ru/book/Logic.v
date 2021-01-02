@@ -242,7 +242,7 @@ Proof.
     - (* left *) apply HQ.
     - (* right *) apply HP.  Qed.
 
-(** **** Exercise: 2 stars, standard (and_assoc) 
+(** **** Exercise: 2 stars, standard (and_assoc)
 
     (In the following proof of associativity, notice how the _nested_
     [intros] pattern breaks the hypothesis [H : P /\ (Q /\ R)] down into
@@ -339,7 +339,7 @@ Proof.
 
 (** To see how negation works, recall the _principle of explosion_
     from the [Tactics] chapter, which asserts that, if we assume a
-    contradiction, then any other proposition can be derived. 
+    contradiction, then any other proposition can be derived.
     Following this intuition, we could define [~ P] ("not [P]") as
     [forall Q, P -> Q].
 
@@ -372,7 +372,7 @@ Proof.
     follows whatever you like"; this is another common name for the
     principle of explosion. *)
 
-(** **** Exercise: 2 stars, standard, optional (not_implies_our_not) 
+(** **** Exercise: 2 stars, standard, optional (not_implies_our_not)
 
     Show that Coq's definition of negation implies the intuitive one
     mentioned above: *)
@@ -433,7 +433,7 @@ Proof.
   (* WORKED IN CLASS *)
   intros P H. unfold not. intros G. apply G. apply H.  Qed.
 
-(** **** Exercise: 2 stars, advanced (double_neg_inf) 
+(** **** Exercise: 2 stars, advanced (double_neg_inf)
 
     Write an informal proof of [double_neg]:
 
@@ -459,7 +459,7 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(** **** Exercise: 1 star, advanced (informal_not_PNP) 
+(** **** Exercise: 1 star, advanced (informal_not_PNP)
 
     Write an informal proof (in English) of the proposition [forall P
     : Prop, ~(P /\ ~P)]. *)
@@ -560,7 +560,7 @@ Proof.
     intros H. rewrite H. intros H'. discriminate H'.
 Qed.
 
-(** **** Exercise: 1 star, standard, optional (iff_properties) 
+(** **** Exercise: 1 star, standard, optional (iff_properties)
 
     Using the above proof that [<->] is symmetric ([iff_sym]) as
     a guide, prove that it is also reflexive and transitive. *)
@@ -691,7 +691,7 @@ Proof.
   exists (2 + m).
   apply Hm.  Qed.
 
-(** **** Exercise: 1 star, standard, especially useful (dist_not_exists) 
+(** **** Exercise: 1 star, standard, especially useful (dist_not_exists)
 
     Prove that "[P] holds for all [x]" implies "there is no [x] for
     which [P] does not hold."  (Hint: [destruct H as [x E]] works on
@@ -703,7 +703,7 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(** **** Exercise: 2 stars, standard (dist_exists_or) 
+(** **** Exercise: 2 stars, standard (dist_exists_or)
 
     Prove that existential quantification distributes over
     disjunction. *)
@@ -807,7 +807,7 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(** **** Exercise: 3 stars, standard, especially useful (All) 
+(** **** Exercise: 3 stars, standard, especially useful (All)
 
     Recall that functions returning propositions can be seen as
     _properties_ of their arguments. For instance, if [P] has type
@@ -820,7 +820,7 @@ Proof.
     restate the left-hand side of [All_In].) *)
 
 Fixpoint All {T : Type} (P : T -> Prop) (l : list T) : Prop
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _your_definition_ ." *). Admitted.
 
 Theorem All_In :
   forall T (P : T -> Prop) (l : list T),
@@ -830,7 +830,7 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(** **** Exercise: 2 stars, standard, optional (combine_odd_even) 
+(** **** Exercise: 2 stars, standard, optional (combine_odd_even)
 
     Complete the definition of the [combine_odd_even] function below.
     It takes as arguments two properties of numbers, [Podd] and
@@ -839,7 +839,7 @@ Proof.
     otherwise. *)
 
 Definition combine_odd_even (Podd Peven : nat -> Prop) : nat -> Prop
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _your_definition_ ." *). Admitted.
 
 (** To test your definition, prove the following facts: *)
 
@@ -902,7 +902,7 @@ Check plus_comm : forall n m : nat, n + m = m + n.
     theorem tells us what we can use that theorem for, just as the
     type of a "computational" object tells us what we can do with that
     object -- e.g., if we have a term of type [nat -> nat -> nat], we
-    can give it two [nat]s as arguments and get a [nat] back. 
+    can give it two [nat]s as arguments and get a [nat] back.
     Similarly, if we have an object of type [n = m -> n + n = m + m]
     and we provide it an "argument" of type [n = m], we can derive
     [n + n = m + m]. *)
@@ -1151,7 +1151,7 @@ Print Assumptions function_equality_ex2.
          forall (X Y : Type) (f g : X -> Y),
                 (forall x : X, f x = g x) -> f = g *)
 
-(** **** Exercise: 4 stars, standard (tr_rev_correct) 
+(** **** Exercise: 4 stars, standard (tr_rev_correct)
 
     One problem with the definition of the list-reversing function
     [rev] that we have is that it performs a call to [app] on each
@@ -1372,7 +1372,7 @@ Qed.
     between the boolean and propositional worlds will often be
     convenient in later chapters. *)
 
-(** **** Exercise: 2 stars, standard (logical_connectives) 
+(** **** Exercise: 2 stars, standard (logical_connectives)
 
     The following theorems relate the propositional connectives studied
     in this chapter to the corresponding boolean operations. *)
@@ -1388,7 +1388,7 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(** **** Exercise: 1 star, standard (eqb_neq) 
+(** **** Exercise: 1 star, standard (eqb_neq)
 
     The following theorem is an alternate "negative" formulation of
     [eqb_eq] that is more convenient in certain situations.  (We'll see
@@ -1400,7 +1400,7 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(** **** Exercise: 3 stars, standard (eqb_list) 
+(** **** Exercise: 3 stars, standard (eqb_list)
 
     Given a boolean operator [eqb] for testing equality of elements of
     some type [A], we can define a function [eqb_list] for testing
@@ -1410,18 +1410,18 @@ Proof.
 
 Fixpoint eqb_list {A : Type} (eqb : A -> A -> bool)
                   (l1 l2 : list A) : bool
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _вашим_определением_ ." *). Admitted.
 
 Theorem eqb_list_true_iff :
   forall A (eqb : A -> A -> bool),
     (forall a1 a2, eqb a1 a2 = true <-> a1 = a2) ->
     forall l1 l2, eqb_list eqb l1 l2 = true <-> l1 = l2.
 Proof.
-(* FILL IN HERE *) Admitted.
+(* МЕСТО ДЛЯ ЗАПОЛНЕНИЯ *) Admitted.
 
 (** [] *)
 
-(** **** Exercise: 2 stars, standard, especially useful (All_forallb) 
+(** **** Exercise: 2 stars, standard, especially useful (All_forallb)
 
     Recall the function [forallb], from the exercise
     [forall_exists_challenge] in chapter [Tactics]: *)
@@ -1438,13 +1438,13 @@ Fixpoint forallb {X : Type} (test : X -> bool) (l : list X) : bool :=
 Theorem forallb_true_iff : forall X test (l : list X),
    forallb test l = true <-> All (fun x => test x = true) l.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  (* МЕСТО ДЛЯ ЗАПОЛНЕНИЯ *) Admitted.
 
 (** (Ungraded thought question) Are there any important properties of
     the function [forallb] which are not captured by this
     specification? *)
 
-(* FILL IN HERE
+(* МЕСТО ДЛЯ ЗАПОЛНЕНИЯ
 
     [] *)
 
@@ -1561,7 +1561,7 @@ Qed.
     this line of reasoning cannot be encoded in Coq without assuming
     additional axioms. *)
 
-(** **** Exercise: 3 stars, standard (excluded_middle_irrefutable) 
+(** **** Exercise: 3 stars, standard (excluded_middle_irrefutable)
 
     Proving the consistency of Coq with the general excluded middle
     axiom requires complicated reasoning that cannot be carried out
@@ -1584,10 +1584,10 @@ Theorem excluded_middle_irrefutable: forall (P:Prop),
   ~ ~ (P \/ ~ P).
 Proof.
   unfold not. intros P H.
-  (* FILL IN HERE *) Admitted.
+  (* МЕСТО ДЛЯ ЗАПОЛНЕНИЯ *) Admitted.
 (** [] *)
 
-(** **** Exercise: 3 stars, advanced (not_exists_dist) 
+(** **** Exercise: 3 stars, advanced (not_exists_dist)
 
     It is a theorem of classical logic that the following two
     assertions are equivalent:
@@ -1605,10 +1605,10 @@ Theorem not_exists_dist :
   forall (X:Type) (P : X -> Prop),
     ~ (exists x, ~ P x) -> (forall x, P x).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  (* МЕСТО ДЛЯ ЗАПОЛНЕНИЯ *) Admitted.
 (** [] *)
 
-(** **** Exercise: 5 stars, standard, optional (classical_axioms) 
+(** **** Exercise: 5 stars, standard, optional (classical_axioms)
 
     For those who like a challenge, here is an exercise taken from the
     Coq'Art book by Bertot and Casteran (p. 123).  Each of the
@@ -1636,7 +1636,7 @@ Definition de_morgan_not_and_not := forall P Q:Prop,
 Definition implies_to_or := forall P Q:Prop,
   (P->Q) -> (~P\/Q).
 
-(* FILL IN HERE
+(* МЕСТО ДЛЯ ЗАПОЛНЕНИЯ
 
     [] *)
 

@@ -65,14 +65,14 @@ Proof.
     important to realize that, modulo these bits of bookkeeping,
     applying [nat_ind] is what we are really doing. *)
 
-(** **** Exercise: 2 stars, standard (plus_one_r') 
+(** **** Exercise: 2 stars, standard (plus_one_r')
 
     Complete this proof without using the [induction] tactic. *)
 
 Theorem plus_one_r' : forall n:nat,
   n + 1 = S n.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  (* ЗАПОЛНИТЕ ЗДЕСЬ *) Admitted.
 (** [] *)
 
 (** Coq generates induction principles for every datatype
@@ -109,7 +109,7 @@ Check time_ind :
     P night ->
     forall t : time, P t.
 
-(** **** Exercise: 1 star, standard, optional (rgb) 
+(** **** Exercise: 1 star, standard, optional (rgb)
 
     Write out the induction principle that Coq will generate for the
     following datatype.  Write down your answer on paper or type it
@@ -171,9 +171,9 @@ Check natlist'_ind :
     (forall l : natlist', P l -> forall n : nat, P (nsnoc l n)) ->
     forall n : natlist', P n.
 
-(** **** Exercise: 1 star, standard (booltree_ind) 
+(** **** Exercise: 1 star, standard (booltree_ind)
 
-    In the comment below, Write out the induction principle that Coq 
+    In the comment below, Write out the induction principle that Coq
     will generate for the following datatype. *)
 
 Inductive booltree : Type :=
@@ -181,14 +181,14 @@ Inductive booltree : Type :=
  | bt_leaf (b : bool)
  | bt_branch (b : bool) (t1 t2 : booltree).
 
-(* FILL IN HERE:
+(* ЗАПОЛНИТЕ ЗДЕСЬ:
    ... *)
 
 (* Do not modify the following line: *)
 Definition manual_grade_for_booltree_ind : option (nat*string) := None.
 (** [] *)
 
-(** **** Exercise: 1 star, standard (toy_ind) 
+(** **** Exercise: 1 star, standard (toy_ind)
 
     Here is an induction principle for a toy type:
 
@@ -201,7 +201,7 @@ Definition manual_grade_for_booltree_ind : option (nat*string) := None.
     principle Coq generates is that given above: *)
 
 Inductive Toy : Type :=
-  (* FILL IN HERE *)
+  (* ЗАПОЛНИТЕ ЗДЕСЬ *)
 .
 (* Do not modify the following line: *)
 Definition manual_grade_for_toy_ind : option (nat*string) := None.
@@ -238,7 +238,7 @@ Definition manual_grade_for_toy_ind : option (nat*string) := None.
     function that, when applied to a type [X], gives us back an
     induction principle specialized to the type [list X]. *)
 
-(** **** Exercise: 1 star, standard, optional (tree) 
+(** **** Exercise: 1 star, standard, optional (tree)
 
     Write out the induction principle that Coq will generate for
    the following datatype.  Compare your answer with what Coq
@@ -250,7 +250,7 @@ Inductive tree (X:Type) : Type :=
 Check tree_ind.
 (** [] *)
 
-(** **** Exercise: 1 star, standard, optional (mytype) 
+(** **** Exercise: 1 star, standard, optional (mytype)
 
     Find an inductive definition that gives rise to the
     following induction principle:
@@ -262,10 +262,10 @@ Check tree_ind.
             (forall m : mytype X, P m ->
                forall n : nat, P (constr3 X m n)) ->
             forall m : mytype X, P m
-*) 
+*)
 (** [] *)
 
-(** **** Exercise: 1 star, standard, optional (foo) 
+(** **** Exercise: 1 star, standard, optional (foo)
 
     Find an inductive definition that gives rise to the
     following induction principle:
@@ -277,10 +277,10 @@ Check tree_ind.
              (forall f1 : nat -> foo X Y,
                (forall n : nat, P (f1 n)) -> P (quux X Y f1)) ->
              forall f2 : foo X Y, P f2
-*) 
+*)
 (** [] *)
 
-(** **** Exercise: 1 star, standard, optional (foo') 
+(** **** Exercise: 1 star, standard, optional (foo')
 
     Consider the following inductive definition: *)
 
@@ -428,7 +428,7 @@ Proof.
   - (* m = S m' *) simpl. rewrite <- IHm'.
     rewrite <- plus_n_Sm. reflexivity.  Qed.
 
-(** **** Exercise: 1 star, standard, optional (plus_explicit_prop) 
+(** **** Exercise: 1 star, standard, optional (plus_explicit_prop)
 
     Rewrite both [plus_assoc'] and [plus_comm'] and their proofs in
     the same style as [mult_0_r''] above -- that is, for each theorem,
@@ -436,7 +436,7 @@ Proof.
     induction, and state the theorem and proof in terms of this
     defined proposition.  *)
 
-(* FILL IN HERE
+(* ЗАПОЛНИТЕ ЗДЕСЬ
 
     [] *)
 
