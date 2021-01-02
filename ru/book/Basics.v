@@ -322,16 +322,16 @@ Proof. simpl. reflexivity. Qed.
     [false]. *)
 
 Definition nandb (b1:bool) (b2:bool) : bool
-  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _ваше_определение_ ." *). Admitted.
+  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _вашем_определением_ ." *). Admitted.
 
 Example test_nandb1:               (nandb true false) = true.
-(* FILL IN HERE *) Admitted.
+(* МЕСТО ДЛЯ ЗАПОЛНЕНИЯ *) Admitted.
 Example test_nandb2:               (nandb false false) = true.
-(* FILL IN HERE *) Admitted.
+(* МЕСТО ДЛЯ ЗАПОЛНЕНИЯ *) Admitted.
 Example test_nandb3:               (nandb false true) = true.
-(* FILL IN HERE *) Admitted.
+(* МЕСТО ДЛЯ ЗАПОЛНЕНИЯ *) Admitted.
 Example test_nandb4:               (nandb true true) = false.
-(* FILL IN HERE *) Admitted.
+(* МЕСТО ДЛЯ ЗАПОЛНЕНИЯ *) Admitted.
 (** [] *)
 
 (** **** Exercise: 1 star, standard (andb3)
@@ -344,7 +344,7 @@ Definition andb3 (b1:bool) (b2:bool) (b3:bool) : bool
   (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _вашим_определением_ ." *). Admitted.
 
 Example test_andb31:                 (andb3 true true true) = true.
-(* FILL IN HERE *) Admitted.
+(* МЕСТО ДЛЯ ЗАПОЛНЕНИЯ *) Admitted.
 Example test_andb32:                 (andb3 false true true) = false.
 (* МЕСТО ДЛЯ ЗАПОЛНЕНИЯ *) Admitted.
 Example test_andb33:                 (andb3 true false true) = false.
