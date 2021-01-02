@@ -235,17 +235,17 @@ Proof. simpl. reflexivity.  Qed.
 From Coq Require Export String.
 
 (* ================================================================= *)
-(** ** Booleans *)
+(** ** Логический тип (booleans) *)
 
-(** In a similar way, we can define the standard type [bool] of
-    booleans, with members [true] and [false]. *)
+(** Похожим образом мы можем определить стандартный логический тип [bool],
+членами которого являются [true] и [false]. *)
 
 Inductive bool : Type :=
   | true
   | false.
 
-(** Functions over booleans can be defined in the same way as
-    above: *)
+(** Функции для работы с логическими данными можно определить таким же
+образом, как мы уже делали выше: *)
 
 Definition negb (b:bool) : bool :=
   match b with
@@ -265,12 +265,11 @@ Definition orb (b1:bool) (b2:bool) : bool :=
   | false => b2
   end.
 
-(** (Although we are rolling our own booleans here for the sake
-    of building up everything from scratch, Coq does, of course,
-    provide a default implementation of the booleans, together with a
-    multitude of useful functions and lemmas.  Whenever possible,
-    we'll name our own definitions and theorems so that they exactly
-    coincide with the ones in the standard library.) *)
+(** (Здесь мы сами определяем наш собственный логический тип
+(booleans), но Coq естественно имеет стандартную реализацию этого
+типа, как и множество функций и лемм для работы с ним. Там где это
+возможно, мы будем давать наши определения и теоремы таким образом,
+что бы они точно совпадали с такими же из стандартной библиотеки.) *)
 
 (** The last two of these illustrate Coq's syntax for
     multi-argument function definitions.  The corresponding
