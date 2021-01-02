@@ -198,31 +198,33 @@ Proof. simpl. reflexivity.  Qed.
         баллов, в случае если вы будете использовать основную теорему
         что бы решить дальнейшие упражнения.
 
-    You will also notice that each chapter (like [Basics.v]) is
-    accompanied by a _test script_ ([BasicsTest.v]) that automatically
-    calculates points for the finished homework problems in the
-    chapter.  These scripts are mostly for the auto-grading
-    tools, but you may also want to use them to double-check
-    that your file is well formatted before handing it in.  In a
-    terminal window, either type "[make BasicsTest.vo]" or do the
-    following:
+    Как вы уже могли заметить, файл каждой главы (как [Basics.v])
+    сопровождается файлом с тестовыми скриптами ([BasicsTest.v]),
+    которые автоматически считают баллы за выполнение домашних
+    заданий. Эти скрипты предназначены для автоматических инструментов
+    оценки, но вы тоже можете запустить их что бы проверить верное
+    форматирование файла с упражнениями, перед тем как отправить их на
+    проверку. Запустите в терминале команду [make BasicsTest.vo],
+    либо:
 
-       coqc -Q . LF Basics.v
-       coqc -Q . LF BasicsTest.v
+    coqc -Q . LF Basics.v
 
-    See the end of this chapter for more information about how to interpret
-    the output of test scripts.
+    coqc -Q . LF BasicsTest.v
 
-    There is no need to hand in [BasicsTest.v] itself (or [Preface.v]).
+    В конце этой главы вы найдёте более подробную информацию о том как
+    интерпретировать вовод тестовых скриптов.
 
-    If your class is using the Canvas system to hand in assignments...
-      - If you submit multiple versions of the assignment, you may
-        notice that they are given different names.  This is fine: The
-        most recent submission is the one that will be graded.
-      - To hand in multiple files at the same time (if more than one
-        chapter is assigned in the same week), you need to make a
-        single submission with all the files at once using the button
-        "Add another file" just above the comment box. *)
+    Нет необходимости в проверке самого [BasicsTest.v] (или [Preface.v]).
+
+    Если в вашей группе для проверки задач используется Canvas system...
+      - Если вы опубликуете несколько версий решения одной о той же
+        задачи, то вы можете заметите что им будут присвоены разные
+        имена. Это нормально: оцениваться будет только последнее
+        опубликованное.  - Что бы проверить несколько файлов с
+        заданиями за один раз (если больше, чем одна глава пройдена на
+        одну неделю), вы должны публиковать все файлы за один раз,
+        пользуясь кнопкой "Add another file", рассположенной над
+        областью с комментариями. *)
 
 (** The [Require Export] statement on the next line tells Coq to use
     the [String] module from the standard library.  We'll use strings
