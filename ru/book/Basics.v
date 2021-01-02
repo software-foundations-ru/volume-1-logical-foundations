@@ -198,6 +198,9 @@ Proof. simpl. reflexivity.  Qed.
         баллов, в случае если вы будете использовать основную теорему
         что бы решить дальнейшие упражнения.
 
+    Прим. переводчика: заголовки упражнений не были переводены на
+    русский язык с целью не сломать тесты.
+
     Как вы уже могли заметить, файл каждой главы (как [Basics.v])
     сопровождается файлом с тестовыми скриптами ([BasicsTest.v]),
     которые автоматически считают баллы за выполнение домашних
@@ -297,25 +300,25 @@ Notation "x || y" := (orb x y).
 Example test_orb5:  false || false || true = true.
 Proof. simpl. reflexivity. Qed.
 
-(** Примечание о нотации в книге: В [.v] файлах мы используем
-    квадратные скобки для обозначения Coq кода. Этот синтаксис, так же
-    используется инструментом для построения документации [coqdoc],
-    визуально отделяя эти участки от окружающего их текста. В HTML
-    версии книги, эти части будут выделены [другим шрифтом или CSS
-    стилями]. *)
+(** Примечание: в [.v] файлах мы используем квадратные скобки для
+    обозначения Coq кода. Этот синтаксис, так же используется
+    инструментом [coqdoc], визуально отделяя эти участки от
+    окружающего их текста. В HTML версии книги, эти части будут
+    выделены [другим шрифтом или CSS стилями]. *)
 
 (** **** Exercise: 1 star, standard (nandb)
 
-    The command [Admitted] can be used as a placeholder for an
-    incomplete proof.  We use it in exercises to indicate the parts
-    that we're leaving for you -- i.e., your job is to replace
-    [Admitted]s with real proofs.
+    Команда [Admitted] может быть использована как плейсхолдер для
+    неполного доказательства. Она встречается в упражнениях что бы
+    обозначить части, которые оставилены для вас. Заменить [Admitted]
+    настоящим доказательством - это ваша работа.
 
-    Remove "[Admitted.]" and complete the definition of the following
-    function; then make sure that the [Example] assertions below can
-    each be verified by Coq.  (I.e., fill in each proof, following the
-    model of the [orb] tests above, and make sure Coq accepts it.) The
-    function should return [true] if either or both of its inputs are
+    Удалите [Admitted.] в коде ниже и завершите определение
+    функции. Затем с помощью Coq убедитесь в верности утверждений,
+    начинающихся с помощью команды [Example]. Другими словами
+    заполните каждое доказательство, следуя примеру выше для функции
+    [orb] и удостоверьтесь что Coq принимает их. Функция должна
+    возвращать [true] если один из двух или оба аргумента являются
     [false]. *)
 
 Definition nandb (b1:bool) (b2:bool) : bool
