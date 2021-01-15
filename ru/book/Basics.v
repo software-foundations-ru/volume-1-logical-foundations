@@ -308,10 +308,11 @@ Proof. simpl. reflexivity. Qed.
 
 (** **** Exercise: 1 star, standard (nandb)
 
-    Команда [Admitted] может быть использована как плейсхолдер для
-    неполного доказательства. Она встречается в упражнениях что бы
-    обозначить части, которые оставилены для вас. Заменить [Admitted]
-    настоящим доказательством - это ваша работа.
+    Команда [Admitted] может быть использована как временный
+    заполнитель для неполного доказательства. Она встречается в
+    упражнениях что бы обозначить части, которые оставилены для
+    вас. Заменить [Admitted] настоящим доказательством - это ваша
+    работа.
 
     Удалите [Admitted.] в коде ниже и завершите определение
     функции. Затем с помощью Coq убедитесь в верности утверждений,
@@ -322,7 +323,7 @@ Proof. simpl. reflexivity. Qed.
     [false]. *)
 
 Definition nandb (b1:bool) (b2:bool) : bool
-  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _вашем_определением_ ." *). Admitted.
+  (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _вашим_определением_ ." *). Admitted.
 
 Example test_nandb1:               (nandb true false) = true.
 (* МЕСТО ДЛЯ ЗАПОЛНЕНИЯ *) Admitted.
@@ -330,15 +331,15 @@ Example test_nandb2:               (nandb false false) = true.
 (* МЕСТО ДЛЯ ЗАПОЛНЕНИЯ *) Admitted.
 Example test_nandb3:               (nandb false true) = true.
 (* МЕСТО ДЛЯ ЗАПОЛНЕНИЯ *) Admitted.
-Example test_nandb4:               (nandb true true) = false.
+                                        Example test_nandb4:               (nandb true true) = false.
 (* МЕСТО ДЛЯ ЗАПОЛНЕНИЯ *) Admitted.
 (** [] *)
 
 (** **** Exercise: 1 star, standard (andb3)
 
-    Do the same for the [andb3] function below. This function should
-    return [true] when all of its inputs are [true], and [false]
-    otherwise. *)
+    Сделайте то же самое для функции [andb3]. Эта функция должна
+    возвращать [true] когда все входные значения являются [true], и
+    [false] в другом случае. *)
 
 Definition andb3 (b1:bool) (b2:bool) (b3:bool) : bool
   (* ЗАМЕНИТЕ ЭТУ СТРОКУ ":= _вашим_определением_ ." *). Admitted.
@@ -354,45 +355,48 @@ Example test_andb34:                 (andb3 true true false) = false.
 (** [] *)
 
 (* ================================================================= *)
-(** ** Types *)
+(** ** Типы *)
 
-(** Every expression in Coq has a type, describing what sort of
-    thing it computes. The [Check] command asks Coq to print the type
-    of an expression. *)
+(** Каждое выражение в Coq имеет тип, описывающий тип вычисляемой им
+    сущности. С помощью команды [Check] можно вывести тип выражения на
+    экран. *)
 
 Check true.
 (* ===> true : bool *)
 
-(** If the expression after [Check] is followed by a colon and a type,
-    Coq will verify that the type of the expression matches the given
-    type and halt with an error if not. *)
+(** Если за выражением, стоящим после команды [Check], следует
+    двоеточие, то Coq проверит что тип выражения совпадает с указанным
+    типом и если это не так, то остановит выполнение программы с
+    ошибкой. *)
 
 Check true
     : bool.
 Check (negb true)
     : bool.
 
-(** Functions like [negb] itself are also data values, just like
-    [true] and [false].  Their types are called _function types_, and
-    they are written with arrows. *)
+(** Функции (например [negb]) сами являются значением данных, таким же
+    как [true] and [false]. Ихние типы называются функциональными
+    типами, и записываются с помощью стрелки. *)
 
 Check negb
     : bool -> bool.
 
-(** The type of [negb], written [bool -> bool] and pronounced
-    "[bool] arrow [bool]," can be read, "Given an input of type
-    [bool], this function produces an output of type [bool]."
-    Similarly, the type of [andb], written [bool -> bool -> bool], can
-    be read, "Given two inputs, each of type [bool], this function
-    produces an output of type [bool]." *)
+(** Тип функции [negb] записывается как [bool -> bool], произносится
+    как "[bool] стрелка [bool]," и может быть прочитан таким образом:
+    "Дано входное значение типа [bool], произведением функции явлется
+    выходное значение типа [bool]."  Аналогично, тип функции [andb],
+    записывается как [bool -> bool -> bool], и может быть прочитан
+    так: "Даны два входных значения, каждое типа [bool], произведением
+    функции является выходное значение типа [bool]." *)
 
 (* ================================================================= *)
-(** ** New Types from Old *)
+(** ** Новые типы на основе старых *)
 
-(** The types we have defined so far are examples of "enumerated
-    types": their definitions explicitly enumerate a finite set of
-    elements, called _constructors_.  Here is a more interesting type
-    definition, where one of the constructors takes an argument: *)
+(** Типы, которые мы недавно определили являются примерами
+"перечислимых типов": их определения явно перечислены в виде конечного
+множества элементов, называемых конструкторами. Вот более интересный
+пример определения типа, где один из конструкторов принимает аргумент:
+*)
 
 Inductive rgb : Type :=
   | red
@@ -404,18 +408,20 @@ Inductive color : Type :=
   | white
   | primary (p : rgb).
 
-(** Let's look at this in a little more detail.
+(** Давайте рассмотрим этот пример более детально.
 
-    Every inductively defined type ([day], [bool], [rgb], [color],
-    etc.) describes a set of _constructor expressions_ built from
-    _constructors_.
+    Каждый индуктивно определённый тип ([day], [bool], [rgb], [color],
+    etc.) описывает множество выражений-конструкторов, построенных из
+    конструкторов.
 
-    - We start with an infinite set of _constructors_. E.g., [red],
-      [primary], [true], [false], [monday], etc. are constructors.
+    - Мы начинаем, имея конечное множество конструкторов. Например: [red],
+      [primary], [true], [false], [monday], и т.д. - это конструкторы.
 
-    - _Constructor expressions_ are formed by applying a constructor
-      to zero or more other constructors or constructor expressions.
-      E.g.,
+    - Выражения-конструкторы получаются в результате применения
+      конструктора к нулю илии больше других конструкторов или
+      выражений-конструкторов.
+
+      Например:
          - [red]
          - [true]
          - [primary]
@@ -425,9 +431,8 @@ Inductive color : Type :=
          - [primary (primary primary)]
          - etc.
 
-    - An [Inductive] definition carves out a subset of the whole space
-      of constructor expressions and gives it a name, like [bool],
-      [rgb], or [color]. *)
+    - [Inductive] определения  [bool],
+      [rgb], или [color]. *)
 
 (** In particular, the definitions of [rgb] and [color] say
     which constructor expressions belong to the sets [rgb] and
